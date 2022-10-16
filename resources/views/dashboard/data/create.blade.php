@@ -5,16 +5,16 @@
     <div class="bungkus">
 
         <div class="main">
-            <div class="topbar hidden md:flex">
-                <div class="toggle">
-                    <ion-icon name="menu-outline"></ion-icon>
-                </div>
-            </div>
+           
+          <div class="toggle md:mt-2 hidden lg:flex">
+            <ion-icon name="menu-outline" class="hidden lg:flex"> </ion-icon>
+          </div>
 
-            <div class="bg-white rounded-lg shadow relative">
+
+            <div class="bg-white rounded-lg shadow relative -mt-10 lg:mt-2">
               <div class="flex items-start justify-between p-5 border-b rounded-t">
 
-                      <h3 class="text-xl font-semibold pt-10">
+                      <h3 class="text-xl font-semibold pt-2">
                         Tambah Data
                       </h3>
                       

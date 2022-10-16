@@ -3,22 +3,13 @@
 @section('container')
     <div class="bungkus">
 
-
-        {{-- navbar muncul ketika medium --}}
-        @include('Dashboard.layouts.sidebar')
-
-        {{-- navbar muncul ketika mobile hidden ketika md --}}
-        @include('Dashboard.layouts.navbar')
-
         <!-- ========================= Main ==================== -->
         <div class="main container w-4/5 pr-16">
 
-            <div class="topbar hidden md:flex">
-                <div class="toggle">
-                    <ion-icon name="menu-outline"></ion-icon>
-                </div>
+           <div class="toggle md:mt-2 hidden lg:flex">
+                <ion-icon name="menu-outline" class="hidden lg:flex"> </ion-icon>
             </div>
-
+            
 
             <div class="bg-white lg:mt-4 inset-0">
 

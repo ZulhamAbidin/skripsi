@@ -5,33 +5,46 @@
 
     <div class="main lg:mt-3">
 
-        <div class="topbar mb-5 mt-4">
-            <div class="toggle hidden md:flex">
-                <ion-icon name="menu-outline"></ion-icon>
+        <div class="header p-2 grid grid-cols-9 items-center ">
+        
+            <div class="toggle row-start-1 col-span-1 md:mt-2 hidden lg:flex invisible lg:visible">
+                <ion-icon name="menu-outline" class="hidden lg:flex"></ion-icon>
             </div>
-
-            <div class="block lg:ml-16 pt-0 sm:pt-5 w-full mt-0 items-center md:divide-x md:divide-gray-100">
-                
-                    <form action class="sm:pr-3 mb-4 sm:mb-0 inline" action=" {{ url('dashboard/document/show') }}" method="GET">
-                        <label for="products-search" class="sr-only">Search</label>
-                
-                        <div class="mt-1 relative sm:w-full lg:w-5/6">
-                            <input type="text" name="search" id=""
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg active:outline-cyan-500 focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5 placeholder:outline-none "
-                                placeholder="Search Data">
-                            <a href="{{ url('dashboard/data/') }}" class="absolute top-2 right-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </a>
-                        </div>
-                
-                    </form>
-                
+        
+            <form action action=" {{ url('dashboard/document/show') }}" method="GET"
+                class="col-span-9 row-start-1 lg:col-span-8 col-start-1 lg:col-start-2 flex items-center">
+                <label for="simple-search" class="sr-only">Search</label>
+                <div class="relative w-full">
+                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <input type="text" name="search" id=""
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full pl-10 p-2.5"
+                        placeholder="Search" required="">
+                    <a href="{{ url('dashboard/document/show') }}" class="absolute top-2 right-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </a>
                 </div>
-
+                <button type="submit"
+                    class="p-2.5 ml-2 text-sm font-medium text-white bg-cyan-600 rounded-lg border border-cyan-500 hover:bg-cyan-500 focus:ring-4 focus:outline-none focus:ring-cyan-500">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+            </form>
         </div>
+
 
         <div class="bg-white lg:mt-3 inset-0 z-10 p-4 lg:pb-0 lg:pt-0">
 

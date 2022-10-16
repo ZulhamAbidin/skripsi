@@ -1,5 +1,5 @@
-<nav class="bg-cyan-600 text-slate-50 md:hidden border-gray-200 lg:fixed z-30 w-full">
-    <div class="px-3 py-3 lg:px-5 lg:pl-3">
+<nav class="bg-cyan-600 text-slate-50 lg:hidden border-gray-200 w-full">
+    <div class="px-3 py-3">
         <div class="flex items-center justify-between">
             <div class="flex items-center justify-start">
                 <button class="mobile-menu-hamburger lg:hidden cursor-pointer" id="toggleSidebarMobile"
@@ -18,7 +18,7 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                <a href="" class="text-lg font-semibold flex items-center lg:ml-2.5">
+                <a href="" class="text-lg font-semibold flex lg:hidden items-center lg:ml-2.5">
                     <img src="https://2.bp.blogspot.com/-O1lY0v44nIA/WjNH9mr8p5I/AAAAAAAAF-8/dugkUbl52QwGU_WZpR2V10yyoFnrbjqKgCLcBGAs/s1600/Kota%2Bmakassar.png"
                         class="h-11" alt="logo">
                     <span class="self-center whitespace-nowrap">E-Document</span>
@@ -40,39 +40,40 @@
         </div>
 
         <div class="hidden hamburger-menu justify-between items-center w-full relative">
-            <ul class="flex flex-col mt-10 lg:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+            <ul class="flex flex-col mt-10 lg:flex-row md:space-x-8 md:mt-2 md:text-sm md:font-medium">
+
                 <li>
-                    <a href="/Dashboard"
-                        class="block py-2 pr-4 pl-3 text-slate-50 hover:text-slate-900 my-1 rounded-xl text-md border-gray-100 hover:bg-gray-50 {{ Request::is('Dashboard') ? 'bg-gray-50 text-slate-900': ''  }}">
+                    <a href="/dashboard"
+                        class="block py-2 pr-4 pl-3 md:ml-8 text-slate-50 hover:text-slate-900 my-1 rounded-xl text-md border-gray-100 hover:bg-gray-50 {{ Request::is('dashboard') ? 'bg-gray-50 text-slate-900': ''  }}">
                         Dashboard</a>
                 </li>
 
                 <li>
-                    <a href="/Dashboard/data"
-                        class="block py-2 pr-4 pl-3 text-slate-50 hover:text-slate-900 my-1 rounded-xl text-md border-gray-100 hover:bg-gray-50 {{ Request::is('Dashboard/data') ? 'bg-gray-50 text-slate-900': ''  }}">Data
+                    <a href="/dashboard/data"
+                        class="block py-2 pr-4 pl-3 text-slate-50 hover:text-slate-900 my-1 rounded-xl text-md border-gray-100 hover:bg-gray-50 {{ Request::is('dashboard/data') ? 'bg-gray-50 text-slate-900': ''  }}">Data
                         Pekerja</a>
                 </li>
 
                 <li>
-                    <a href="/Dashboard/data/create"
-                        class="block py-2 pr-4 pl-3 text-slate-50 hover:text-slate-900 my-1 rounded-xl text-md border-gray-100 hover:bg-gray-50 {{ Request::is('Dashboard/data/create') ? 'bg-gray-50 text-slate-900': ''  }}">Tambah
+                    <a href="/dashboard/data/create"
+                        class="block py-2 pr-4 pl-3 text-slate-50 hover:text-slate-900 my-1 rounded-xl text-md border-gray-100 hover:bg-gray-50 {{ Request::is('dashboard/data/create') ? 'bg-gray-50 text-slate-900': ''  }}">Tambah
                         Data Pekerja</a>
                 </li>
 
                 <li>
-                    <a href="/Dashboard/cetak/cetak-data-pekerja-form"
-                        class="block py-2 pr-4 pl-3 text-slate-50 hover:text-slate-900 my-1 rounded-xl text-md border-gray-100 hover:bg-gray-50 {{ Request::is('Dashboard/cetak/cetak-data-pekerja-form') ? 'bg-gray-50 text-slate-900': ''  }}">Print</a>
+                    <a href="/dashboard/cetak/cetak-data-pekerja-form"
+                        class="block py-2 pr-4 pl-3 text-slate-50 hover:text-slate-900 my-1 rounded-xl text-md border-gray-100 hover:bg-gray-50 {{ Request::is('dashboard/cetak/cetak-data-pekerja-form') ? 'bg-gray-50 text-slate-900': ''  }}">Print</a>
                 </li>
 
                 <li>
-                    <a href="/Dashboard/document/show"
-                        class="block py-2 pr-4 pl-3 text-slate-50 hover:text-slate-900 my-1 rounded-xl text-md border-gray-100 hover:bg-gray-50 {{ Request::is('Dashboard/document/index') ? 'bg-gray-50 text-slate-900': ''  }} {{ Request::is('Dashboard/document/show') ? 'bg-gray-50 text-slate-900': ''  }}">Cloud
+                    <a href="/dashboard/document/show"
+                        class="block py-2 pr-4 pl-3 text-slate-50 hover:text-slate-900 my-1 rounded-xl text-md border-gray-100 hover:bg-gray-50 {{ Request::is('dashboard/document/index') ? 'bg-gray-50 text-slate-900': ''  }} {{ Request::is('dashboard/document/show') ? 'bg-gray-50 text-slate-900': ''  }}">Cloud
                         Document</a>
                 </li>
 
                 <li>
-                    <a href="/Dashboard/password/edit"
-                        class="block py-2 pr-4 pl-3 text-slate-50 hover:text-slate-900 my-1 rounded-xl text-md border-gray-100 hover:bg-gray-50 {{ Request::is('Dashboard/password/edit') ? 'bg-gray-50 text-slate-900': ''  }}">Settings
+                    <a href="/dashboard/password/edit"
+                        class="block py-2 pr-4 pl-3 text-slate-50 hover:text-slate-900 my-1 rounded-xl text-md border-gray-100 hover:bg-gray-50 {{ Request::is('dashboard/password/edit') ? 'bg-gray-50 text-slate-900': ''  }}">Settings
                     </a>
                 </li>
 

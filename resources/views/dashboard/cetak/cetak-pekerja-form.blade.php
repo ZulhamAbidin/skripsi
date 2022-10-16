@@ -5,14 +5,11 @@
 
   <div class="main fixed mt-3">
 
-    <div class="topbar hidden md:flex">
-      <div class="toggle">
-        <ion-icon name="menu-outline"></ion-icon>
-      </div>
-
+    <div class="toggle md:mt-2 hidden lg:flex">
+      <ion-icon name="menu-outline" class="hidden lg:flex"> </ion-icon>
     </div>
 
-    <div class="bg-white lg:mt-3 mt-15 inset-0 z-10 p-4 lg:pb-0 lg:pt-0">
+    <div class="bg-white lg:mt-3 -mt-16 inset-0 z-10 p-4 lg:pb-0 lg:pt-0">
 
       <div class="p-4 bg-white block sm:flex items-center justify-between border-b border-gray-200 lg:mt-1.5">
         <div class="mb-1 w-full">

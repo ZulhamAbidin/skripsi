@@ -3,36 +3,29 @@
 @section('container')
     <div class="bungkus">
 
-        <div class="main fixed">
+        <div class="main">
+
             <div class="topbar hidden md:flex">
-                <div class="toggle">
-                    <ion-icon name="menu-outline"></ion-icon>
+                <div class="toggle md:mt-2 hidden lg:flex">
+                    <ion-icon name="menu-outline" class="hidden lg:flex"> </ion-icon>
                 </div>
             </div>
 
-
-            <div class="bg-white lg:absolute lg:mt-28 mt-15 inset-0 z-10 p-4">
-
-                <div class="modal w-full top-24 md:top-24 lg:top-20 lg:right-0 left-0 right-0 md:inset-0 z-50 justify-center items-center h-modal sm:h-full"
-                    id="add-product-modal">
-                    
-                    <div class=" w-full max-w-3xl md:max-w-5xl lg:max-w-6xl px-4 md:p-0 h-full md:h-auto">
-                        
-                        <div class="bg-white rounded-lg shadow relative">
-                            
+            <div class="bg-white lg:absolute -mt-16 lg:mt-4 p-4 lg:w-full">
+                <div class="w-full justify-center items-center">
+                    <div class=" w-full px-4 md:p-0 h-full md:h-auto">
+                        <div class="bg-white rounded-lg shadow">
                             <div class="flex justify-between p-5 border-b rounded-t">
                                 <h3 class="text-xl  font-semibold">
                                     Ganti Password
                                 </h3>
-                               
+
                                 <div class="">
                                     <a href="/registerauth"
-                                        class="text-slate-50 text-center rounded-xl py-2 px-6 font-semibold bg-cyan-600 hover:bg-cyan-700 text-sm">Tambah User</a>
+                                        class="text-slate-50 text-center rounded-xl py-2 px-6 font-semibold bg-cyan-600 hover:bg-cyan-700 text-sm">Tambah
+                                        User</a>
                                 </div>
-                             
                             </div>
-                            
-
                             @if (Session::has('success'))
                                 <div
                                     class="flex justify-between text-slate-50 shadow-inner rounded p-3 bg-cyan-600 mx-24 my-6">
@@ -42,13 +35,9 @@
                                     <strong class="text-xl align-center cursor-pointer alert-del">&times;</strong>
                                 </div>
                             @endif
-                            
-
-
                             <div class="p-6 space-y-6">
                                 {{-- <form method="POST" action="{{ url('/dashboard/password/update') }}"> --}}
-                                <form method="POST" class="text-pink-500"
-                                    action="{{ url('/dashboard/password/edit') }}">
+                                <form method="POST" class="text-pink-500" action="{{ url('/dashboard/password/edit') }}">
                                     @method('put')
                                     @csrf
                                     <div class="grid grid-cols-6 gap-6">
@@ -68,7 +57,8 @@
                                         </div>
 
                                         <div class="col-span-6">
-                                            <label for="password" class="text-sm font-medium text-gray-900 block mb-2">Password
+                                            <label for="password"
+                                                class="text-sm font-medium text-gray-900 block mb-2">Password
                                                 Baru</label>
                                             <input type="password" name="password" id="password"
                                                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
@@ -84,8 +74,7 @@
                                             <label for="password_confirmation"
                                                 class="text-sm font-medium text-gray-900 block mb-2">Konfirmasi
                                                 Password Baru</label>
-                                            <input type="password" name="password_confirmation"
-                                                id="password_confirmation"
+                                            <input type="password" name="password_confirmation" id="password_confirmation"
                                                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                                                 value="">
 
@@ -94,10 +83,6 @@
                                             @endforeach
 
                                         </div>
-
-
-
-
 
                                     </div>
                             </div>

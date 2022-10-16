@@ -20,9 +20,9 @@
 </head>
 
 <body>
+
     @include('dashboard.layouts.sidebar')
     @include('dashboard.layouts.navbar')
-
     @yield('container')
 
     <script src="{{ asset('js/main.js') }}"></script>
