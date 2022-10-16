@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -73,5 +73,7 @@
             </div>
         </div>
     </div>
-</div>
-@endsection
+</div> 
+@endsection --}}
+
+<h1 style="text-align: center; margin-top: 100px;">FITUR REGISTER TELAH DINONAKTIFKAN</h1>
