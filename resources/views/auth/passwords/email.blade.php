@@ -1,3 +1,5 @@
+{{-- Kirim Ke email --}}
+
 @extends('layouts.app')
 
 @section('content')
