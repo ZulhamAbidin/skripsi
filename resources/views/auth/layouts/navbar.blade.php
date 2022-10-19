@@ -1,4 +1,4 @@
-<nav class="bg-cyan-600 border-gray-200 px-2 sm:px-4 py-3 text-slate-50">
+{{-- <nav class="bg-cyan-600 border-gray-200 px-2 sm:px-4 py-3 text-slate-50">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
 
         <a href="" class="flex items-center md:ml-8">
@@ -7,5 +7,14 @@
             <span class="self-center text-xl font-semibold whitespace-nowrap">E-Document</span>
         </a>
 
+    </div>
+</nav> --}}
+
+<nav class="bg-white border-b-2 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+    <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <a href="https://flowbite.com/" class="flex items-center">
+            <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
+            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white italic">E-Document</span>
+        </a>
     </div>
 </nav>

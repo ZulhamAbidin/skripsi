@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
-    <link rel="icon" href="{{ asset('image/dashboardicon.png') }}">
+    @vite('resources/css/app.css')
 </head>
-
 <body>
-
     @include('auth.layouts.navbar')
-
-    @yield('container2')
-
-
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="js/tailwind.config.js"></script>
+    @yield('container')
+    @include('auth.layouts.footer')
+    @vite('resources/js/app.js')
 </body>
-
 </html>
