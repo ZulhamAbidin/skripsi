@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN</title>
+    <title>E-DOCUMENT
+        {{ Request::is('login') ? 'LOGIN' : '' }}
+        {{ Request::is('register') ? 'REGISTER' : '' }}
+        {{ Request::is('password.request') ? 'RESET' : '' }}
+    </title>
     @vite('resources/css/app.css')
 </head>
 <body class="bg-slate-50 dark:bg-slate-900">
