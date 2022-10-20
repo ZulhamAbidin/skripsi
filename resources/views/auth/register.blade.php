@@ -5,7 +5,7 @@
 
         <form class="mx-10 my-10 md:w-2/3 md:mx-auto lg:w-1/2" method="POST" action="{{ route('register') }}">
             @csrf
-        <div class="name text-center font-medium text-xl mb-4">REGISTER</div>
+        <div class="name text-center font-medium text-xl mb-4 dark:text-gray-300">REGISTER</div>
         <div class="grid gap-1 mb-6 lg:mb-1 md:grid-cols-2">
 
             <div class="mb-6 col-span-2">

@@ -7,7 +7,7 @@
     <title>LOGIN</title>
     @vite('resources/css/app.css')
 </head>
-<body>
+<body class="bg-slate-50 dark:bg-slate-900">
 
     @include('auth.layouts.navbar')
 

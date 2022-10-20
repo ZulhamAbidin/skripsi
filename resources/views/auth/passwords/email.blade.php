@@ -2,7 +2,7 @@
 
 @section('container')
     <div class="box  mt-8 mx-10 md:w-1/2 lg:w-1/3 md:mx-auto">
-        <div class="name text-center mb-4 font-semibold">{{ __('Reset Password') }}</div>
+        <div class="name text-center mb-4 font-semibold dark:text-slate-50">{{ __('Reset Password') }}</div>
 
         @if (session('status'))
             <div class="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800"

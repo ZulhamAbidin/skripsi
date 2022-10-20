@@ -1,7 +1,7 @@
 @extends('auth.layouts.main')
 
 @section('container')
-    <form class="mx-10 my-10 md:w-2/3 md:mx-auto lg:w-1/2" method="POST" action="{{ route('password.update') }}">
+    <form class="mx-10 my-10 md:w-2/3 md:mx-auto lg:w-1/2 dark:text-slate-50" method="POST" action="{{ route('password.update') }}">
         @csrf
         <div class="name text-center font-medium text-xl mb-4">{{ __('Reset Password') }}</div>
         <div class="grid gap-1 mb-6 lg:mb-1 md:grid-cols-2">
