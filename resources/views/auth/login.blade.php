@@ -1,6 +1,7 @@
 @extends('auth.layouts.main')
 
 @section('container')
+
     <form class="mt-8 space-y-6 mx-8 md:w-1/2 md:mx-auto" action="/login" method="post">
 
         @csrf
@@ -32,6 +33,7 @@
         <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">
             Sign in
         </h2>
+      
 
         <div>
             <label for="email" class="text-sm font-medium text-gray-900 block mb-2">Your
@@ -71,6 +73,8 @@
         </div>
 
     </form>
+
+
 @endsection
 
 
