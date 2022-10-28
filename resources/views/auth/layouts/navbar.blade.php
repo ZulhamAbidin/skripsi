@@ -16,7 +16,7 @@
             </svg>
         </button>
         
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        {{-- <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border text-gray-700 border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 
                 <li>
@@ -52,7 +52,7 @@
                 </li>
             </ul>
             
-        </div>
+        </div> --}}
     </div>
 </nav>
 
