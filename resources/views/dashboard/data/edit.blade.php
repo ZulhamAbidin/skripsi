@@ -29,7 +29,7 @@
                                             <label for="nama_lengkap"
                                                 class="text-sm font-medium text-gray-900 block mb-2">Nama Lengkap</label>
                                             <input type="text" name="nama_lengkap"
-                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
+                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5"
                                                 value="{{ $model->nama_lengkap }}">
                                             @foreach ($errors->get('nama_lengkap') as $msg)
                                                 <p class="text-sky-500">{{ $msg }}</p>
@@ -40,7 +40,7 @@
                                             <label for="jenis_kelamin"
                                                 class="text-sm font-medium text-gray-900 block mb-2">Jenis kelamin</label>
                                             <select name="jenis_kelamin"
-                                                class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                                                class="block appearance-none w-full bg-gray-200 border border-gray-200 focus:ring-teal-600 focus:border-teal-600 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                                                 <option value="{{ $model->jenis_kelamin }}">{{ $model->jenis_kelamin }}
                                                 </option>
                                                 <option value="Pria">Pria</option>
@@ -48,19 +48,12 @@
                                             </select>
                                         </div>
 
-                                        {{-- <div class="col-span-6 sm:col-span-3">
-                                        <label for="alamat_domisili" class="text-sm font-medium text-gray-900 block mb-2">Alamat Domisili</label>
-                                        <input type="text" name="alamat_domisili" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
-                                        value="{{ $model->alamat_domisili }}">
-                                          @foreach ($errors->get('alamat_domisili') as $msg)
-                                      @endforeach
-                                    </div> --}}
 
                                         <div class="col-span-6 sm:col-span-3">
                                             <label for="alamat_domisili"
                                                 class="text-sm font-medium text-gray-900 block mb-2">Alamat Domisili</label>
                                             <select name="alamat_domisili"
-                                                class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                                class="block appearance-none w-full bg-gray-200 border border-gray-200 focus:ring-teal-600 focus:border-teal-600 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                                                 value="{{ $model->alamat_domisili }}">
                                                 <option value="{{ $model->alamat_domisili }}">{{ $model->alamat_domisili }}
                                                 </option>
@@ -104,7 +97,7 @@
                                                 class="text-sm font-medium text-gray-900 block mb-2">Tanggal
                                                 Pengesahan</label>
                                             <input type="date" name="hari"
-                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
+                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg  focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5"
                                                 placeholder="year.mounth.days" required>
                                         </div>
 
@@ -113,7 +106,7 @@
                                                 class="text-sm font-medium text-gray-900 block mb-2">Pendidikan
                                                 Terakhir</label>
                                             <select name="pendidikan_terakhir"
-                                                class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                                                class="block appearance-none w-full bg-gray-200 border border-gray-200  text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                                                 <option value="{{ $model->pendidikan_terakhir }}">
                                                     {{ $model->pendidikan_terakhir }}</option>
                                                 <option value="TK / RA">TK / RA</option>
@@ -131,7 +124,7 @@
                                             <label for="hari"
                                                 class="text-sm font-medium text-gray-900 block mb-2">Jurusan</label>
                                             <input type="text" name="jurusan"
-                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
+                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5"
                                                 placeholder="Jurusan" value="{{ $model->jurusan }}">
                                             @foreach ($errors->get('jurusan') as $msg)
                                             @endforeach
@@ -141,10 +134,10 @@
                             </div>
                             <div class="p-6 border-t border-gray-200 rounded pb-0">
                                 <button
-                                    class="text-white w-full mb-2 bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                    class="text-white w-full mb-2 bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:ring-teal-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                                     type="submit">Submit</button>
                                 <button
-                                    class="text-white w-full bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                    class="text-white w-full bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:ring-teal-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                                     type="">Kembali</button>
                             </div>
 

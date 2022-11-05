@@ -28,26 +28,26 @@
         <div class="mb-6 mt-8">
           <label for="success" class="block mb-2 text-sm font-medium text-slate-900">Nama Document</label>
           <input type="text" name="nama"
-            class="bg-slate-50 text-slate-900 outline-cyan-600 border border-gray-500 text-sm rounded-lg 0 block w-full p-2.5"
+            class="bg-slate-50 text-slate-900 outline-teal-600 border border-gray-500 focus:border-teal-500  focus:ring-teal-500 text-sm rounded-lg 0 block w-full p-2.5"
             placeholder="Nama Document" required>
         </div>
 
         <div class="mb-6 mt-8">
           <label for="success" class="block mb-2 text-sm font-medium text-slate-900">Deskripsi Document</label>
           <input type="text" name="description"
-            class="bg-slate-50 text-slate-900 outline-cyan-600 border border-gray-500 text-sm rounded-lg 0 block w-full p-2.5"
+            class="bg-slate-50 text-slate-900 outline-teal-600 border border-gray-500 focus:border-teal-500  focus:ring-teal-500 text-sm rounded-lg 0 block w-full p-2.5"
             placeholder="Deskripsi Document" required>
         </div>
 
 
         <label class="block mb-2 text-sm font-medium text-gray-900" for="default_size">Pilih Document</label>
         <input
-          class="block mb-5 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer focus:outline-none"
+          class="block mb-5 py-2 w-full text-sm text-gray-900 bg-gray-50 focus:border-teal-500  focus:ring-teal-500 rounded-lg border border-gray-300 cursor-pointer focus:outline-none"
           id="default_size" type="file" name="file" required>
 
         <a href="/dashboard/document/show">
           <button type="submit"
-            class="text-white block w-full bg-cyan-600 hover:bg-cyan-700  focus:ring-4 focus:ring-cyan-300 mt-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none ">Upload
+            class="text-white block w-full bg-teal-600 hover:bg-teal-700  focus:ring-4 focus:ring-teal-300 mt-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none ">Unggah
             Document
           </button>
         </a>

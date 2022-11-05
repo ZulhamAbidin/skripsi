@@ -46,19 +46,9 @@
          @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
     </div>
 
-    <div class="flex items-start mb-6">
-        <div class="flex items-center h-5">
-            <input id="remember" type="checkbox" value=""
-                class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-                required="">
-        </div>
-        <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-    </div>
-
-
     <div class="grid grid-cols-3 md:flex md:justify-between ">
         <button type="submit"
-            class="col-span-3 md:flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{{
+            class="col-span-3 md:flex text-white bg-teal-600 hover:bg-teal-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{{
             __('Login') }}</button>
         @if (Route::has('password.request'))
         

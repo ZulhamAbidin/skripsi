@@ -3,8 +3,7 @@
         <li>
             <a href="#" class="flex">
                 <span class="icon mt-5">
-                    <img src="https://2.bp.blogspot.com/-O1lY0v44nIA/WjNH9mr8p5I/AAAAAAAAF-8/dugkUbl52QwGU_WZpR2V10yyoFnrbjqKgCLcBGAs/s1600/Kota%2Bmakassar.png"
-                        class="h-11" alt="logo">
+                    <img src={{ asset('image/mks.jpg') }} class="h-14" alt="logo">
                 </span>
                 <span class="title mt-3 ">E-Document</span>
             </a>
@@ -13,7 +12,7 @@
         <li class="my-2 {{ Request::is('dashboard') ? 'hovered' : ''  }}">
             <a href="/dashboard" class="">
                 <span class="icon">
-                    <ion-icon name="file-tray-outline"></ion-icon>
+                    <ion-icon name="file-tray-outline" class=""></ion-icon>
                 </span>
                 <span class="title">Dashboard</span>
             </a>
