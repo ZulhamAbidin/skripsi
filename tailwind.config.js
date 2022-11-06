@@ -8,7 +8,13 @@ module.exports = {
     ],
     darkMode: "class",
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                // temaa: "##f472b6",
+                temaku: "#ec4899",
+                temakuhover: "#db2777",
+            },
+        },
     },
     plugins: [require("flowbite/plugin")],
 };

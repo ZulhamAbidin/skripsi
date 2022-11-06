@@ -24,7 +24,7 @@
                         </svg>
                     </div>
                     <input type="text" name="search" id=""
-                        class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full pl-10 p-2.5"
+                        class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full pl-10 p-2.5"
                         placeholder="Search" required="">
 
                     <a href="{{ url('dashboard/document/show') }}" class="absolute top-2 right-3">
@@ -35,7 +35,7 @@
                     </a>
                 </div>
                 <button type="submit"
-                    class="p-2.5 ml-2 text-sm font-medium text-white bg-teal-600 rounded-lg border border-teal-600 hover:bg-teal-500 focus:ring-4 focus:outline-none focus:ring-teal-500">
+                    class="p-2.5 ml-2 text-sm font-medium text-white bg-temaku rounded-lg border border-temaku hover:bg-temakuhover focus:ring-4 focus:outline-none focus:ring-temaku">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -52,7 +52,7 @@
 
             @if (Session::has('success'))
 
-            <div class="flex justify-between text-slate-50 shadow-inner rounded p-3 bg-teal-600 mx-24 my-6">
+            <div class="flex justify-between text-slate-50 shadow-inner rounded p-3 bg-temaku mx-24 my-6">
                 <p class="self-center">
                     <strong>{{ Session::get('success') }}</strong>
                 </p>
@@ -69,7 +69,7 @@
 
                 <div class="mb-1 col-span-2 col-start-5 lg:mr-28 overflow-x-auto">
                     <a href="/dashboard/document/index"
-                        class=" text-white bg-teal-600 py-2 px-4 text-sm hover:bg-teal-700 focus:ring-4 focus:ring-teal-200 font-medium inline-flex items-center rounded-lg">
+                        class=" text-white bg-temaku py-2 px-4 text-sm hover:bg-temakuhover focus:ring-4 focus:ring-temaku font-medium inline-flex items-center rounded-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-5 h-5 mr-2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -83,7 +83,7 @@
                 <div class='overflow-x-auto w-full'>
                     <table
                         class='mx-auto max-w-4xl w-full whitespace-nowrap rounded-lg bg-white divide-y divide-gray-300 overflow-hidden'>
-                        <thead class="bg-teal-600">
+                        <thead class="bg-temaku">
                             <tr class="text-white text-center">
                                 <th class="font-semibold text-xs uppercase px-3 py-3"> NO </th>
                                 <th class="font-semibold text-xs uppercase px-6 py-3"> NAMA </th>
@@ -114,7 +114,7 @@
                                     
                                            
                                                 <a href="/dashboard/document/show/{{ $value->id }}"
-                                                    class="py-2 px-4 text-xs font-medium flex text-cyan-700 bg-white hover:bg-red-500 hover:text-slate-50 rounded-l-lg border border-gray-200">
+                                                    class="py-2 px-4 text-xs font-medium flex text-temaku bg-white hover:bg-temakuhover hover:text-slate-50 rounded-l-lg border border-gray-200">
                                                     <svg class="mr-2 h-5 w-5 text-xs" fill="currentColor" viewBox="0 0 20 20"
                                                         xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd"
@@ -127,7 +127,7 @@
                                            
                                     
                                             <a href="{{url('/dashboard/document/download',$value->file)}}" type="button" aria-current="page"
-                                                class="py-2 px-4 text-xs font-medium text-cyan-700 bg-white rounded-r-md border border-gray-200 hover:bg-teal-600 hover:text-slate-50">
+                                                class="py-2 px-4 text-xs font-medium text-temaku bg-white rounded-r-md border border-gray-200 hover:bg-temaku hover:text-slate-50">
                                                 <svg class="mr-2 h-5 w-5 text-xs inline" fill="currentColor" viewBox="0 0 20 20"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z">

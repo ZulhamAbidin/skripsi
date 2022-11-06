@@ -29,20 +29,20 @@
         <div class="col-span-6 lg:col-span-3">
           <label for="hari" class="text-sm font-medium text-gray-900 block mb-2">Tanggal Pengesahan</label>
           <input type="date" name="tglawal" id="tglawal"
-            class="shadow-sm bg-gray-50 border focus:border-teal-500  focus:ring-teal-500 border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5"
+            class="shadow-sm bg-gray-50 border focus:border-temaku  focus:ring-temaku border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5"
             placeholder="year.mounth.days" required>
         </div>
 
         <div class="col-span-6 lg:col-span-3">
           <label for="hari" class="text-sm font-medium text-gray-900 block mb-2">Tanggal Pengesahan</label>
           <input type="date"  name="tglakhir" id="tglakhir"
-            class="shadow-sm bg-gray-50 border focus:border-teal-500  focus:ring-teal-500 border-gray-300 text-gray-900 sm:text-sm rounded-lg  block w-full p-2.5"
+            class="shadow-sm bg-gray-50 border focus:border-temaku  focus:ring-temaku border-gray-300 text-gray-900 sm:text-sm rounded-lg  block w-full p-2.5"
             placeholder="year.mounth.days" required>
         </div>
 
         <a href="" onclick="this.href='/dashboard/cetak/cetak-data-pertanggal/'+ document.getElementById('tglawal').value +
                   '/' + document.getElementById('tglakhir').value "
-          class="col-span-6 block text-center py-2 shadow-sm bg-teal-600 border border-gray-300 text-slate-50 sm:text-sm rounded-lg" target="_blank">Cetak data
+          class="col-span-6 block text-center py-2 shadow-sm bg-temaku border border-gray-300 text-slate-50 sm:text-sm rounded-lg" target="_blank">Cetak data
           pertanggal
         </a>
 

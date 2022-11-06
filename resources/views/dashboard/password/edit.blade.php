@@ -22,13 +22,13 @@
 {{-- 
                                 <div class="">
                                     <a href="/registerauth"
-                                        class="text-slate-50 text-center rounded-xl py-2 px-6 font-semibold bg-teal-600 hover:bg-teal-700 text-sm">Tambah
+                                        class="text-slate-50 text-center rounded-xl py-2 px-6 font-semibold bg-temaku hover:bg-temakuhover text-sm">Tambah
                                         User</a>
                                 </div> --}}
                             </div>
                             @if (Session::has('success'))
                                 <div
-                                    class="flex justify-between text-slate-50 shadow-inner rounded p-3 bg-teal-600 mx-24 my-6">
+                                    class="flex justify-between text-slate-50 shadow-inner rounded p-3 bg-temaku mx-24 my-6">
                                     <p class="self-center">
                                         <strong>{{ Session::get('success') }}</strong>
                                     </p>
@@ -47,7 +47,7 @@
                                                 class="text-sm font-medium text-gray-900 block mb-2">
                                                 Password Lama</label>
                                             <input type="password" name="current_password" id="current_password"
-                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5"
+                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full p-2.5"
                                                 value="">
 
                                             @foreach ($errors->get('current_password') as $message)
@@ -61,7 +61,7 @@
                                                 class="text-sm font-medium text-gray-900 block mb-2">Password
                                                 Baru</label>
                                             <input type="password" name="password" id="password"
-                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5"
+                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full p-2.5"
                                                 value="">
 
                                             @foreach ($errors->get('password') as $message)
@@ -75,7 +75,7 @@
                                                 class="text-sm font-medium text-gray-900 block mb-2">Konfirmasi
                                                 Password Baru</label>
                                             <input type="password" name="password_confirmation" id="password_confirmation"
-                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5"
+                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full p-2.5"
                                                 value="">
 
                                             @foreach ($errors->get('password_confirmation') as $message)
@@ -88,11 +88,11 @@
                             </div>
                             <div class="p-6 border-t border-gray-200 rounded pb-48">
                                 <button
-                                    class="text-white w-full mb-2 bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:ring-teal-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                    class="text-white w-full mb-2 bg-temaku hover:bg-temakuhover focus:ring-4 focus:ring-temaku font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                                     type="submit">Submit</button>
 
                                 <button
-                                    class="text-white w-full bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:ring-teal-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                    class="text-white w-full bg-temaku hover:bg-temakuhover focus:ring-4 focus:ring-temaku font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                                     type="">Kembali</button>
                             </div>
 

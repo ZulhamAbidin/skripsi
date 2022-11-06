@@ -1,4 +1,4 @@
-<nav class="bg-teal-600 text-slate-50 border-b-2 border-gray-200 dark:border-gray-800   px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+<nav class="bg-temaku text-slate-50 border-b-2 border-gray-200  px-2 sm:px-4 py-2.5">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
         <a href="/" class="flex items-center">
             <img src={{ asset('image/mks.jpg') }} class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">

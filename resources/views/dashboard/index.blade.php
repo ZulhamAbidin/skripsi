@@ -16,12 +16,12 @@
                 <div class="grid grid-cols-4 gap-2 p-4">
 
                     <div
-                        class="col-span-4 md:col-span-4 text-sm lg:text-base border p-4 text-center rounded-xl shadow-xl mb-10 hover:text-slate-50 bg-teal-600 text-slate-50">
+                        class="col-span-4 md:col-span-4 text-sm lg:text-base border p-4 text-center rounded-xl shadow-xl mb-10 hover:text-slate-50 bg-temaku text-slate-50">
                         Selamat Datang Admin <span class=" font-extrabold">{{ auth()->user()->name }} </span>
                     </div>
 
                     <div
-                        class="col-span-4  md:col-span-2 border p-4 text-center rounded-xl shadow-xl md:mb-10 hover:text-slate-50 bg-teal-600 text-slate-50">
+                        class="col-span-4  md:col-span-2 border p-4 text-center rounded-xl shadow-xl md:mb-10 hover:text-slate-50 bg-temaku text-slate-50">
                         <p>Total Pencari Kerja</p>
 
                         <div class="flex flex-nowrap justify-center mt-4">
@@ -37,7 +37,7 @@
 
                         </div>
                         <a href="/Dashboard/data"
-                            class="block mx-auto py-3 mt-8 rounded-xl text-sm bg-teal-600 border  text-slate-50 w-1/2">Lihat
+                            class="block mx-auto py-3 mt-8 rounded-xl text-sm bg-temaku border  text-slate-50 w-1/2">Lihat
                             Data</a>
                     </div>
 

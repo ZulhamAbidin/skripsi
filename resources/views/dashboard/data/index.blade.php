@@ -23,7 +23,7 @@
                         </svg>
                     </div>
                     <input type="text" name="keyword" id=""
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full pl-10 p-2.5"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full pl-10 p-2.5"
                         placeholder="Search" required="">
 
                     <a href="{{ url('dashboard/data') }}" class="absolute top-2 right-3">
@@ -34,7 +34,7 @@
                     </a>
                 </div>
                 <button type="submit"
-                    class="p-2.5 ml-2 text-sm font-medium text-white bg-teal-600 rounded-lg border border-teal-600 hover:bg-teal-700 focus:ring-4 focus:outline-none focus:ring-teal-700">
+                    class="p-2.5 ml-2 text-sm font-medium text-white bg-temaku rounded-lg border border-temaku hover:bg-temakuhover focus:ring-4 focus:outline-none focus:ring-temakuhover">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -48,7 +48,7 @@
         <div class="header-button flex justify-end lg:justify-end mx-3 gap-1">
 
             <a href="/dashboard/data/create" type="button"
-                class="add-modal  text-white bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:ring-teal-200 font-medium inline-flex items-center rounded-lg text-sm px-3 py-2 text-center">
+                class="add-modal  text-white bg-temaku hover:bg-temakuhover focus:ring-4 focus:ring-temaku font-medium inline-flex items-center rounded-lg text-sm px-3 py-2 text-center">
                 <svg class="-ml-1 mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
@@ -59,7 +59,7 @@
             </a>
 
             <a href="/dashboard/cetak/cetak-data-pekerja-form" type="button"
-                class=" text-white bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:ring-teal-200 font-medium inline-flex items-center rounded-lg text-sm px-3 py-2 text-center">
+                class=" text-white bg-temaku hover:bg-temakuhover focus:ring-4 focus:ring-temaku font-medium inline-flex items-center rounded-lg text-sm px-3 py-2 text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-5 h-5 mr-1">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -70,7 +70,7 @@
             </a>
 
             <a href="/export-csv" type="button"
-                class=" text-white bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:ring-teal-200 font-medium inline-flex items-center rounded-lg text-sm px-3 py-2 text-center">
+                class=" text-white bg-temaku hover:bg-temakuhover focus:ring-4 focus:ring-temaku font-medium inline-flex items-center rounded-lg text-sm px-3 py-2 text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-5 h-5 mr-1">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -89,7 +89,7 @@
                     <div class="mb-1">
                         <h1 class="text-xl font-semibold text-gray-900 flex lg:text-3xl">Data Pencari Kerja</h1>
                         @if (Session::has('success'))
-                        <div class="flex justify-between text-slate-50 shadow-inner rounded p-3 bg-teal-600 mx-24 my-6">
+                        <div class="flex justify-between text-slate-50 shadow-inner rounded p-3 bg-temaku mx-24 my-6">
                             <p class="self-center">
                                 <strong>{{ Session::get('success') }}</strong>
                             </p>
@@ -104,7 +104,7 @@
                 <div class='overflow-x-auto w-full'>
                     <table
                         class='mx-auto max-w-4xl w-full whitespace-nowrap rounded-lg bg-white divide-y divide-gray-300 overflow-hidden'>
-                        <thead class="bg-teal-600">
+                        <thead class="bg-temaku">
                             <tr class="text-white text-left">
                                 <th class="font-semibold text-xs uppercase px-3 py-4"> NO </th>
                                 <th class="font-semibold text-xs uppercase px-6 py-4"> NAMA LENGKAP </th>
@@ -167,7 +167,7 @@
                                             @csrf
                                             <input type="hidden" name="_method" value="DELETE">
                                             <button href="#" aria-current="page"
-                                                class="py-2 px-4 text-xs font-medium flex text-teal-700 bg-white hover:bg-red-500 hover:text-slate-50 rounded-l-lg border border-gray-200">
+                                                class="py-2 px-4 text-xs font-medium flex text-temakuhover bg-white hover:bg-red-500 hover:text-slate-50 rounded-l-lg border border-gray-200">
                                                 <svg class="mr-2 h-5 w-5 text-xs" fill="currentColor"
                                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd"
@@ -180,7 +180,7 @@
                                         </form>
 
                                         <a href="{{ url('dashboard/data/' . $value->id . '/edit') }}" type="button"
-                                            class="py-2 px-4 text-xs font-medium text-teal-700 bg-white rounded-r-md border border-gray-200 hover:bg-amber-400 hover:text-slate-50">
+                                            class="py-2 px-4 text-xs font-medium text-temakuhover bg-white rounded-r-md border border-gray-200 hover:bg-amber-400 hover:text-slate-50">
                                             <svg class="mr-2 h-5 w-5 text-xs inline" fill="currentColor"
                                                 viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                 <path

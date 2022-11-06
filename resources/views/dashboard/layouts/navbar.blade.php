@@ -1,4 +1,4 @@
-<nav class="bg-cyan-600 text-slate-50 lg:hidden border-gray-200 w-full">
+<nav class="bg-temaku text-slate-50 lg:hidden border-gray-200 w-full">
     <div class="px-3 py-3">
         <div class="flex items-center justify-between">
             <div class="flex items-center justify-start">
@@ -26,12 +26,12 @@
             </div>
             <div class="flex items-center">
                 <form action="/logout" method="post"
-                    class="hidden sm:inline-flex ml-5 text-white bg-cyan-600 hover:bg-slate-50 group focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-3 py-2.5 text-center items-center">
+                    class="hidden sm:inline-flex ml-5 text-white bg-temaku hover:bg-slate-50 group focus:ring-4 focus:ring-temaku font-medium rounded-lg text-sm px-3 py-2.5 text-center items-center">
                     @csrf
-                    <button class="ml-3 flex-1 text-slate-50 whitespace-nowrap block group-hover:text-cyan-600"
+                    <button class="ml-3 flex-1 text-slate-50 whitespace-nowrap block group-hover:text-temaku"
                         type="submit">Log Out</button>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6 ml-1 group-hover:text-cyan-600">
+                        stroke="currentColor" class="w-6 h-6 ml-1 group-hover:text-temaku">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
                     </svg>

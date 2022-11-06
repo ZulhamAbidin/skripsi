@@ -27,12 +27,12 @@
 
                           <div class="col-span-6 sm:col-span-3">
                             <label for="nama_lengkap" class="text-sm font-medium text-gray-900 block mb-2">Nama Lengkap</label>
-                            <input type="text" name="nama_lengkap" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5" placeholder="Nama Lengkap" required>
+                            <input type="text" name="nama_lengkap" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full p-2.5" placeholder="Nama Lengkap" required>
                           </div>
 
                           <div class="col-span-6 sm:col-span-3">
                             <label for="jenis_kelamin" class="text-sm font-medium text-gray-900 block mb-2">Jenis kelamin</label>
-                            <select name="jenis_kelamin" class="block appearance-none w-full bg-gray-200 border border-gray-200 focus:ring-teal-600 focus:border-teal-600 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white">
+                            <select name="jenis_kelamin" class="block appearance-none w-full bg-gray-200 border border-gray-200 focus:ring-temaku focus:border-temaku text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white">
                               <option value="Pria">Pria</option>
                               <option value="Wanita">Wanita</option>
                             </select>
@@ -41,7 +41,7 @@
                           <div class="col-span-6 sm:col-span-3">
                             <label for="pendidikan_terakhir" class="text-sm font-medium text-gray-900 block mb-2">Alamat Domisili</label>
                             <select name="alamat_domisili"
-                              class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                              class="focus:ring-temaku focus:border-temaku block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                               <option value="-"></option>
                               <option value="Kota Makassar">Kota Makassar</option>
                               <option value="Kota Palopo">Kota Palopo</option>
@@ -72,12 +72,12 @@
 
                           <div class="col-span-6 sm:col-span-3">
                             <label for="hari" class="text-sm font-medium text-gray-900 block mb-2">Tanggal Pengesahan</label>
-                            <input type="date" name="hari" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5" placeholder="year.mounth.days" required>
+                            <input type="date" name="hari" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full p-2.5" placeholder="year.mounth.days" required>
                           </div>
 
                           <div class="col-span-6 sm:col-span-3">
                             <label for="pendidikan_terakhir" class="text-sm font-medium text-gray-900 block mb-2">Pendidikan Terakhir</label>
-                            <select name="pendidikan_terakhir" class="block appearance-none w-full bg-gray-200 border  focus:ring-teal-600 focus:border-teal-600 border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white">
+                            <select name="pendidikan_terakhir" class="block appearance-none w-full bg-gray-200 border  focus:ring-temaku focus:border-temaku border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white">
                               <option value="TK / RA">TK / RA</option>
                               <option value="SD / MI">SD / MI</option>
                               <option value="SMP / MTS">SMP / MTS</option>
@@ -91,14 +91,14 @@
 
                           <div class="col-span-6 sm:col-span-3">
                             <label for="hari" class="text-sm font-medium text-gray-900 block mb-2">Jurusan</label>
-                            <input type="text" name="jurusan" class="shadow-sm bg-gray-50 border border-gray-300  text-gray-900 sm:text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5" placeholder="Jurusan" required>
+                            <input type="text" name="jurusan" class="shadow-sm bg-gray-50 border border-gray-300  text-gray-900 sm:text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full p-2.5" placeholder="Jurusan" required>
                           </div>
                         
                         </div>
 
                   <div class="border-t mt-7 border-gray-200 rounded pb-48">
-                     <button class="text-white w-full mb-2 bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="submit">Submit</button>
-                     <button class="text-white w-full bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="">Kembali</button>
+                     <button class="text-white w-full mb-2 bg-temaku hover:bg-temakuhover focus:ring-4 focus:ring-temaku font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="submit">Submit</button>
+                     <button class="text-white w-full bg-temaku hover:bg-temakuhover focus:ring-4 focus:ring-temaku font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="">Kembali</button>
                   </div>
 
                   </form>
