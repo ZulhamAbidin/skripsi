@@ -11,8 +11,8 @@ module.exports = {
         extend: {
             colors: {
                 // temaa: "##f472b6",
-                temaku: "#ec4899",
-                temakuhover: "#db2777",
+                temaku: "#0d9488",
+                temakuhover: "#0f766e",
             },
         },
     },

@@ -18,23 +18,50 @@
             </a>
         </li>
 
-        <li class="my-2 {{ Request::is('dashboard/data') ? 'hovered' : ''  }} {{ Request::is('dashboard/data/{$id}.edit') ? 'hovered' : ''  }}">
-            <a href="/dashboard/data">
+
+
+        <li class="my-2 {{ Request::is('dashboard/data') ? 'hovered' : ''  }} {{ Request::is('dashboard/data/{$id}.edit') ? 'hovered' : ''  }} {{ Request::is('dashboard/data/create') ? 'hovered' : ''  }}">
+            <a class="mobile-menu-hamburger1">
                 <span class="icon">
-                    <ion-icon name="people-outline"></ion-icon>
+                    <ion-icon name="person-outline"></ion-icon>
                 </span>
-                <span class="title">Data</span>
+                <span class="title">Data Pekerja</span>
+                <span class="icon  ml-9">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </span>
             </a>
+
+            <div class="hidden hamburger-menu1">
+
+                <a href="/dashboard/data">
+                    <span class="icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </span>
+                    <span class="title">
+                        List Data
+                    </span>
+                </a>
+
+                <a href="/dashboard/data/create">
+                    <span class="icon">
+                        <ion-icon name="person-add-outline"></ion-icon>
+                    </span>
+                    <span class="title">
+                    Tambah Data
+                    </span>
+                </a>
+            </div>
         </li>
 
-        <li class="my-2 {{ Request::is('dashboard/data/create') ? 'hovered' : ''  }}">
-            <a href="/dashboard/data/create">
-                <span class="icon">
-                    <ion-icon name="person-add-outline"></ion-icon>
-                </span>
-                <span class="title">Tambah Data Pekerja</span>
-            </a>
-        </li>
+        {{-- <li class="my-2 {{ Request::is('dashboard/data/create') ? 'hovered' : ''  }}">
+        <a href="/dashboard/data/create">
+            <span class="icon">
+                <ion-icon name="person-add-outline"></ion-icon>
+            </span>
+            <span class="title">Tambah Data Pekerja</span>
+        </a>
+        </li> --}}
+
 
         <li class="my-2 {{ Request::is('dashboard/cetak/cetak-data-pekerja-form') ? 'hovered' : ''  }}">
             <a href="/dashboard/cetak/cetak-data-pekerja-form">
@@ -46,12 +73,13 @@
         </li>
 
         <li class="my-2 {{ Request::is('dashboard/document/show') ? 'hovered' : ''  }}{{ Request::is('dashboard/document/index') ? 'hovered' : ''  }}">
-            <a href="/dashboard/document/show">
+            <a href="/dashboard/document/show" id="dropdownDefault" data-dropdown-toggle="dropdown">
                 <span class="icon">
                     <ion-icon name="cloud-done-outline"></ion-icon>
                 </span>
                 <span class="title">Cloud Document</span>
             </a>
+
         </li>
 
         <li class="my-2 {{ Request::is('dashboard/password/edit') ? 'hovered' : ''  }}">
@@ -62,6 +90,7 @@
                 <span class="title">Settings</span>
             </a>
         </li>
+
 
         <li class="my-2">
             <form action="/logout" method="post">
@@ -74,5 +103,10 @@
                 </a>
             </form>
         </li>
+
     </ul>
 </div>
+
+<script>
+
+</script>
