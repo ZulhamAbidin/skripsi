@@ -165,79 +165,70 @@
 
             </div>
 
-
-            <div class=" bg-white py-2">
-                <div class='overflow-x-auto w-full'>
-                    <table
-                        class='mx-auto max-w-4xl w-full whitespace-nowrap rounded-lg bg-white divide-y divide-gray-300 overflow-hidden'>
-                        <thead class="bg-temaku">
-                            <tr class="text-white text-center">
-                                <th class="font-semibold text-xs uppercase px-3 py-3"> NO </th>
-                                <th class="font-semibold text-xs uppercase px-6 py-3"> NAMA </th>
-                                <th class="font-semibold text-xs uppercase px-6 py-3"> Description </th>
-                                <th class="font-semibold text-xs uppercase px-6 py-3"> Download</th>
-                            </tr>
-                        </thead>
-
-                        <tbody class="divide-y divide-gray-200 text-left text-xs">
-                            {{-- @foreach($data as $data) --}}
-                            @foreach ($data as $key=>$value)
-                            <tr class="group">
-                                <td class="px-1 py-1 border-2 text-center group-hover:bg-gray-300 group-hover:border-gray-300">
-                                   {{ $data->firstItem() + $key }}
-                                </td>
-
-                                <td class="px-2 py-1 border-2 group-hover:bg-gray-300 group-hover:border-gray-300">
-                                   {{ $value->nama }}
-                                </td>
-
-                                <td class="px-1  py-1 text-center border-2 group-hover:bg-gray-300 group-hover:border-gray-300">
-                                    {{ $value->description }}
-                                </td>
-
-                                <td class="px-1  py-1 text-center border-2 group-hover:bg-gray-300 group-hover:border-gray-300">
-                                    
-                                        <div class="inline-flex rounded-md shadow-sm">
-                                    
-                                           
-                                                <a href="/dashboard/document/show/{{ $value->id }}"
-                                                    class="py-2 px-4 text-xs font-medium flex text-temaku bg-white hover:bg-temakuhover hover:text-slate-50 rounded-l-lg border border-gray-200">
-                                                    <svg class="mr-2 h-5 w-5 text-xs" fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd"
-                                                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                                                            clip-rule="evenodd">
-                                                        </path>
-                                                    </svg>
-                                                    Delete
-                                                </a>
-                                           
-                                    
-                                            <a href="{{url('/dashboard/document/download',$value->file)}}" type="button" aria-current="page"
-                                                class="py-2 px-4 text-xs font-medium text-temaku bg-white rounded-r-md border border-gray-200 hover:bg-temaku hover:text-slate-50">
-                                                <svg class="mr-2 h-5 w-5 text-xs inline" fill="currentColor" viewBox="0 0 20 20"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z">
-                                                    </path>
-                                                    <path fill-rule="evenodd"
-                                                        d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                                                        clip-rule="evenodd">
-                                                    </path>
-                                                </svg>
-                                                Download
-                                            </a>
-                                        </div>
-                                    
-                                    </td>
-
+            <div class="overflow-x-auto relative mx-4 mt-8">
+                <table class="w-full text-sm text-left text-gray-500">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                        <tr>
+                            <th scope="col" class="py-3 px-6 rounded-l-lg">
+                               No
+                            </th>
+                            <th scope="col" class="py-3 px-6">
+                               Nama Dokumen
+                            </th>
+                            <th scope="col" class="py-3 px-6">
+                               Description Dokumen
+                            </th>
+                            <th scope="col" class="py-3 rounded-r-lg text-center">
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{-- @foreach ($datamhs as $key => $value) --}}
+                        @foreach ($data as $key=>$value)
+                        <tr class="bg-white hover:bg-slate-100 hover:text-black">
+                            <td class="py-4 px-6">
+                                {{ $data->firstItem() + $key }}
+                            </td>
+                            <td scope="py-4 px-6" class="py-4 px-6">
+                               {{ $value->nama }}
+                            </td>
+                            <td class="py-4 px-6 w-3/5">
+                                {{ $value->description }}
+                            </td>
+                           
+                            <td class="py-4 px-6 rounded-r-xl">
+            
+                                <div class="inline-flex rounded-md shadow-sm">
+                                    <a href="/dashboard/document/show/{{ $value->id }}"
+                                        class="py-2 px-4 text-xs font-medium flex text-temaku bg-white hover:bg-red-500 hover:text-slate-50 rounded-l-lg border border-gray-200">
+                                        <svg class="mr-2 h-5 w-5 text-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                                                clip-rule="evenodd">
+                                            </path>
+                                        </svg>
+                                        Delete
+                                    </a>
                                 
-
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                   <div class="mx-28 mt-4">{{ $data->links() }}</div>
-                </div>
+                                    <a href="{{url('/dashboard/document/download',$value->file)}}" type="button" aria-current="page"
+                                        class="py-2 px-4 flex text-xs font-medium text-temaku bg-white rounded-r-md border border-gray-200 hover:bg-temaku hover:text-slate-50">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                            class="mr-2 h-5 w-5 text-xs inline">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                        </svg>
+                                        Download
+                                    </a>
+                                </div>
+            
+                            </td>
+            
+                        </tr>
+                        @endforeach
+                    </tbody>
+            
+                </table>
             </div>
 
         </div>
