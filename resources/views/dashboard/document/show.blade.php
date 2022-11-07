@@ -5,7 +5,7 @@
 
     <div class="main lg:mt-3">
 
-        <div class="header p-2 grid grid-cols-9 items-center ">
+        {{-- <div class="header p-2 grid grid-cols-9 items-center ">
         
             <div class="toggle row-start-1 col-span-1 md:mt-2 hidden lg:flex invisible lg:visible">
                 <ion-icon name="menu-outline" class="hidden lg:flex"></ion-icon>
@@ -45,6 +45,93 @@
                 </button>
             </form>
 
+        </div> --}}
+
+        <div class="header p-2 grid grid-cols-12 items-center ">
+        
+            <div class="toggle row-start-1 col-span-1 md:mt-2 hidden lg:flex invisible lg:visible">
+                <ion-icon name="menu-outline" class="hidden lg:flex"></ion-icon>
+            </div>
+        
+            <form action action="{{ url('dashboard/document/show') }}" method="GET"
+                class="col-span-11 row-start-1 lg:col-span-9 col-start-1 flex items-center">
+                <label for="simple-search" class="sr-only">Search</label>
+                <div class="relative w-full">
+                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <input type="text" name="search" id=""
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full pl-10 p-2.5"
+                        placeholder="Search" required="">
+        
+                    <a href="{{ url('dashboard/document/show') }}" class="absolute top-2 right-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </a>
+                </div>
+                <button type="submit"
+                    class="p-2.5 ml-2 text-sm font-medium text-white bg-temaku rounded-lg border border-temaku hover:bg-temakuhover focus:ring-4 focus:outline-none focus:ring-temakuhover">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+            </form>
+        
+            <button id="dropdownDefault" data-dropdown-toggle="dropdown"
+                class="text-white invisible lg:visible bg-temaku hover:bg-temakuhover w-fit mx-auto col-span-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                type="button">
+        
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="w-6 h-6 mr-2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+        
+                Admin
+        
+                <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+        
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+                data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
+                style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 539px);">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-4 text-center hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{
+                            auth()->user()->name }}</a>
+                        <hr class="mt-1">
+                    </li>
+                    <li>
+                        <a href="/dashboard"
+                            class="block py-2 px-4 hover:bg-gray-100">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="/dashboard/password/edit"
+                            class="block py-2 px-4 hover:bg-gray-100">Settings</a>
+                    </li>
+                    <li>
+                        <form action="/logout" method="post" class="hover:bg-gray-100">
+                            @csrf
+                            <button class="block py-2 px-4 hover:bg-gray-100" type="submit">Sign Out</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
         </div>
 
 

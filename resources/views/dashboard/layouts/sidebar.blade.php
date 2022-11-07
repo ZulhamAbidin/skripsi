@@ -5,7 +5,7 @@
                 <span class="icon mt-5">
                     <img src={{ asset('image/mks.jpg') }} class="h-14" alt="logo">
                 </span>
-                <span class="title mt-3 ">E-Document</span>
+                <span class="title mt-3 italic text-xl">E-Document</span>
             </a>
         </li>
 
@@ -14,7 +14,7 @@
                 <span class="icon">
                     <ion-icon name="file-tray-outline" class=""></ion-icon>
                 </span>
-                <span class="title">Dashboard</span>
+                <span class="title italic">Dashboard</span>
             </a>
         </li>
 
@@ -53,15 +53,49 @@
             </div>
         </li>
 
-        {{-- <li class="my-2 {{ Request::is('dashboard/data/create') ? 'hovered' : ''  }}">
-        <a href="/dashboard/data/create">
-            <span class="icon">
-                <ion-icon name="person-add-outline"></ion-icon>
-            </span>
-            <span class="title">Tambah Data Pekerja</span>
-        </a>
-        </li> --}}
+        <li
+            class="my-2 {{ Request::is('dashboard/document/show') ? 'hovered' : ''  }}{{ Request::is('dashboard/document/index') ? 'hovered' : ''  }}">
+            <a class="mobile-menu-hamburger2">
+                <span class="icon">
+                    <ion-icon name="cloud-done-outline"></ion-icon>
+                </span>
+                <span class="title italic">E-Documents</span>
+                <span class="icon ml-8">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </span>
+            </a>
+        
+            <div class="hidden hamburger-menu2">
+        
+                <a href="/dashboard/document/show">
+                    <span class="icon">
+                        <ion-icon name="documents-outline"></ion-icon>
+                    </span>
+                    <span class="title">
+                        List Document
+                    </span>
+                </a>
+        
+                <a href="/dashboard/document/index">
+                    <span class="icon">
+                        <ion-icon name="document-text-outline"></ion-icon>
+                    </span>
+                    <span class="title">
+                        Unggah Document
+                    </span>
+                </a>
+            </div>
+        </li>
 
+        {{-- <li class="my-2 {{ Request::is('dashboard/document/show') ? 'hovered' : ''  }}{{ Request::is('dashboard/document/index') ? 'hovered' : ''  }}">
+            <a href="/dashboard/document/show" id="dropdownDefault" data-dropdown-toggle="dropdown">
+                <span class="icon">
+                    <ion-icon name="cloud-done-outline"></ion-icon>
+                </span>
+                <span class="title">Cloud Document</span>
+            </a>
+
+        </li> --}}
 
         <li class="my-2 {{ Request::is('dashboard/cetak/cetak-data-pekerja-form') ? 'hovered' : ''  }}">
             <a href="/dashboard/cetak/cetak-data-pekerja-form">
@@ -72,22 +106,12 @@
             </a>
         </li>
 
-        <li class="my-2 {{ Request::is('dashboard/document/show') ? 'hovered' : ''  }}{{ Request::is('dashboard/document/index') ? 'hovered' : ''  }}">
-            <a href="/dashboard/document/show" id="dropdownDefault" data-dropdown-toggle="dropdown">
-                <span class="icon">
-                    <ion-icon name="cloud-done-outline"></ion-icon>
-                </span>
-                <span class="title">Cloud Document</span>
-            </a>
-
-        </li>
-
         <li class="my-2 {{ Request::is('dashboard/password/edit') ? 'hovered' : ''  }}">
             <a href="/dashboard/password/edit">
                 <span class="icon">
                     <ion-icon name="settings-outline"></ion-icon>
                 </span>
-                <span class="title">Settings</span>
+                <span class="title italic">Settings</span>
             </a>
         </li>
 
@@ -99,7 +123,7 @@
                     <span class="icon">
                         <ion-icon name="log-out-outline"></ion-icon>
                     </span>
-                    <button class="title" type="submit">Sign Out</button>
+                    <button class="title italic" type="submit">Sign Out</button>
                 </a>
             </form>
         </li>

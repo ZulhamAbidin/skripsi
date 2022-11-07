@@ -36,14 +36,14 @@
         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
         <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full p-2.5
           @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email"
-            autofocus>
+            autofocus type="email">
     </div>
 
     <div class="mb-6">
         <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
             password</label>
         <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full p-2.5
-         @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+         @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" >
     </div>
 
     <div class="grid grid-cols-3 md:flex md:justify-between ">

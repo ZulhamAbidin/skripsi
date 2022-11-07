@@ -25,7 +25,7 @@ class datacontroller extends Controller
             ->orWhere('pendidikan_terakhir', 'LIKE', '%' . $keyword . '%')
             ->orWhere('jurusan', 'LIKE', '%' . $keyword . '%')
             ->orderBy('id', 'desc')
-            ->paginate(6);
+            ->paginate(5);
         return view('Dashboard.data.index', compact('datamhs'));
     }
 

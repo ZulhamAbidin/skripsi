@@ -1,7 +1,7 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
-<div class="bungkus">
+<div class="bungkus w-11/12">
     <div class="main mt-3 lg:fixed">
 
         <div class="header p-2 grid grid-cols-12 items-center ">
@@ -44,31 +44,45 @@
             </form>
 
             <button id="dropdownDefault" data-dropdown-toggle="dropdown"
-                class="text-white invisible lg:visible bg-temaku hover:bg-temakuhover w-28 mx-auto col-span-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                type="button">Settings <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
+                class="text-white invisible lg:visible bg-temaku hover:bg-temakuhover w-fit mx-auto col-span-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                type="button">
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="w-6 h-6 mr-2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+
+                Admin 
+
+                <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg></button>
+                </svg>
+
+            </button>
             <!-- Dropdown menu -->
             <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
                 data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
                 style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 539px);">
                 <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
                     <li>
-                        <a href="#"
+                        <a href="#" class="block py-2 px-4 text-center hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{ auth()->user()->name }}</a>
+                        <hr class="mt-1">
+                    </li>
+                    <li>
+                        <a href="/dashboard"
                             class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="/dashboard/password/edit"
                             class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                            out</a>
+                        <form action="/logout" method="post" class="hover:bg-gray-100">
+                            @csrf
+                            <button class="block py-2 px-4 hover:bg-gray-100" type="submit">Sign Out</button>
+                        </form>
                     </li>
                 </ul>
             </div>
@@ -129,7 +143,7 @@
                 </div>
             </div>
 
-            <div class=" bg-white py-2">
+            {{-- <div class=" bg-white py-2">
                 <div class='overflow-x-auto w-full'>
                     <table
                         class='mx-auto max-w-4xl w-full whitespace-nowrap rounded-lg bg-white divide-y divide-gray-300 overflow-hidden'>
@@ -234,6 +248,103 @@
 
                     <div class="mx-14 mt-3 ">{{ $datamhs->links() }}</div>
                 </div>
+            </div> --}}
+
+            <div class="overflow-x-auto relative mx-4">
+                <table class="w-full text-sm text-left text-gray-500">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                        <tr>
+                            <th scope="col" class="py-3 px-6 rounded-l-lg">
+                                NO
+                            </th>
+                            <th scope="col" class="py-3 px-6">
+                                Nama Lengkap
+                            </th>
+                            <th scope="col" class="py-3 px-6">
+                                Jenis Kelamin
+                            </th>
+                            <th scope="col" class="py-3 px-6">
+                                Alamat Domisili
+                            </th>
+                            <th scope="col" class="py-3 px-6">
+                                Tanggal Pengesahan
+                            </th>
+                            <th scope="col" class="py-3 px-6">
+                                Pendidikan Terakhir
+                            </th>
+                            <th scope="col" class="py-3 px-6">
+                                Jurusan
+                            </th>
+                            <th scope="col" class="py-3 rounded-r-lg text-center">
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                        @foreach ($datamhs as $key => $value)
+                        <tr class="bg-white hover:bg-slate-100 hover:text-black">
+                            <th class="py-4 text-center px-2 font-medium text-gray-900 rounded-l-xl">
+                                {{ $datamhs->firstItem() + $key }}
+                            </th>
+                            <td scope="py-4 px-6" class="py-4 w-56 px-6">
+                                {{ $value->nama_lengkap }}
+                            </td>
+                            <td class="py-4 px-6">
+                                {{ $value->jenis_kelamin }}
+                            </td>
+                            <td class="py-4 px-6">
+                                {{ $value->alamat_domisili }}
+                            </td>
+                            <td class="py-4 px-6">
+                                {{ \Carbon\Carbon::parse($value->hari)->format('d F Y') }}
+                            </td>
+                            <td class="py-4 px-6">
+                                {{ $value->pendidikan_terakhir }}
+                            </td>
+                            <td class="py-4 px-6">
+                                {{ $value->jurusan }}
+                            </td>
+                            <td class="py-4 px-6 rounded-r-xl">
+
+                                <div class="inline-flex rounded-md shadow-sm">
+                                    <form action="{{ url('dashboard/data/' . $value->id) }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button href="#" aria-current="page"
+                                            class="py-2 px-4 text-xs font-medium flex text-temakuhover bg-white hover:bg-red-500 hover:text-slate-50 rounded-l-lg border border-gray-200">
+                                            <svg class="mr-2 h-5 w-5 text-xs" fill="currentColor" viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                                                    clip-rule="evenodd">
+                                                </path>
+                                            </svg>
+                                            Delete
+                                        </button>
+                                    </form>
+                                
+                                    <a href="{{ url('dashboard/data/' . $value->id . '/edit') }}" type="button"
+                                        class="py-2 flex px-4 text-xs font-medium text-temakuhover bg-white rounded-r-md border border-gray-200 hover:bg-amber-400 hover:text-slate-50">
+                                        <svg class="mr-2 h-5 w-5 text-xs " fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z">
+                                            </path>
+                                            <path fill-rule="evenodd"
+                                                d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                                                clip-rule="evenodd">
+                                            </path>
+                                        </svg>
+                                        Edit
+                                    </a>
+                                </div>
+                                
+                            </td>
+
+                        </tr>
+                        @endforeach
+                    </tbody>
+                    
+                </table>
             </div>
 
 

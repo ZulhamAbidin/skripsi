@@ -5,9 +5,55 @@
 
         <div class="main">
 
-            <div class="topbar hidden md:flex">
-                <div class="toggle md:mt-2 hidden lg:flex">
-                    <ion-icon name="menu-outline" class="hidden lg:flex"> </ion-icon>
+            <div class="header flex justify-between">
+                <div class="toggle md:mt-2 hidden lg:flex ">
+                    <ion-icon name="menu-outline" class="hidden lg:flex"></ion-icon>
+                </div>
+            
+                <button id="dropdownDefault" data-dropdown-toggle="dropdown"
+                    class="text-white text-center flex h-10 mt-4 mr-2 inline bg-temaku hover:bg-temakuhover focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5"
+                    type="button">
+            
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        class="w-6 h-6 mr-2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+            
+                    Admin
+            
+                    <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+            
+                </button>
+                <!-- Dropdown menu -->
+                <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+                    data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
+                    style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 539px);">
+                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-4 text-center hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{
+                                auth()->user()->name }}</a>
+                            <hr class="mt-1">
+                        </li>
+                        <li>
+                            <a href="/dashboard"
+                                class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="/dashboard/password/edit"
+                                class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                        </li>
+                        <li>
+                            <form action="/logout" method="post" class="hover:bg-gray-100">
+                                @csrf
+                                <button class="block py-2 px-4 hover:bg-gray-100" type="submit">Sign Out</button>
+                            </form>
+                        </li>
+                    </ul>
                 </div>
             </div>
 

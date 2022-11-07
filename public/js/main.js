@@ -33,7 +33,9 @@ const btn = document.querySelector("button.mobile-menu-hamburger");
 const menu = document.querySelector(".hamburger-menu");
 
 btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
+menu.classList.toggle("hidden");
+
+
 });
 
 
@@ -41,6 +43,14 @@ const btn1 = document.querySelector(".mobile-menu-hamburger1");
 const menu1 = document.querySelector(".hamburger-menu1");
 
 btn1.addEventListener("click", () => {
-menu1.classList.toggle("hidden");
+menu1.classList.toggle("hidden"); 
+});
 
+
+
+const btn2 = document.querySelector(".mobile-menu-hamburger2");
+const menu2 = document.querySelector(".hamburger-menu2");
+
+btn2.addEventListener("click", () => {
+menu2.classList.toggle("hidden");
 });
