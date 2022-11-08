@@ -9,7 +9,7 @@
             </a>
         </li>
 
-        <li class="my-2 {{ Request::is('dashboard') ? 'hovered' : ''  }}">
+        <li class="my-2 {{ Request::is('dashboard') ? 'hovered' : ''  }} {{ Request::is('home') ? 'hovered' : ''  }}">
             <a href="/dashboard" class="">
                 <span class="icon">
                     <ion-icon name="file-tray-outline" class=""></ion-icon>
@@ -20,12 +20,12 @@
 
 
 
-        <li class="my-2 {{ Request::is('dashboard/data') ? 'hovered' : ''  }} {{ Request::is('dashboard/data/{$id}.edit') ? 'hovered' : ''  }} {{ Request::is('dashboard/data/create') ? 'hovered' : ''  }}">
+        <li class="my-2 {{ Request::is('dashboard/data') ? 'hovered' : ''  }} {{ Request::is('*dashboard/data/*/edit') ? 'hovered' : '' }} {{ Request::is('dashboard/data/{$id}.edit') ? 'hovered' : ''  }} {{ Request::is('dashboard/data/create') ? 'hovered' : ''  }}">
             <a class="mobile-menu-hamburger1">
                 <span class="icon">
                     <ion-icon name="person-outline"></ion-icon>
                 </span>
-                <span class="title">Data Pekerja</span>
+                <span class="title cursor-pointer">Data Pekerja</span>
                 <span class="icon  ml-9">
                     <ion-icon name="chevron-down-outline"></ion-icon>
                 </span>
@@ -59,7 +59,7 @@
                 <span class="icon">
                     <ion-icon name="cloud-done-outline"></ion-icon>
                 </span>
-                <span class="title italic">E-Documents</span>
+                <span class="title italic cursor-pointer">E-Document</span>
                 <span class="icon ml-8">
                     <ion-icon name="chevron-down-outline"></ion-icon>
                 </span>
@@ -78,7 +78,7 @@
         
                 <a href="/dashboard/document/index">
                     <span class="icon">
-                        <ion-icon name="document-text-outline"></ion-icon>
+                        <ion-icon name="cloud-upload-outline"></ion-icon>
                     </span>
                     <span class="title">
                         Unggah Document

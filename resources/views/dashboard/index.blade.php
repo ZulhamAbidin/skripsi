@@ -12,7 +12,7 @@
                 </div>
 
                 <button id="dropdownDefault" data-dropdown-toggle="dropdown"
-                    class="text-white text-center flex h-10 mt-4 inline bg-temaku hover:bg-temakuhover focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5"
+                    class="text-white text-center hidden lg:flex h-10 mt-4 inline bg-temaku hover:bg-temakuhover focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5"
                     type="button">
                 
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -84,7 +84,7 @@
                             </div>
 
                         </div>
-                        <a href="/Dashboard/data"
+                        <a href="/dashboard/data"
                             class="block mx-auto py-3 mt-8 rounded-xl text-sm bg-temaku border  text-slate-50 w-1/2">Lihat
                             Data</a>
                     </div>

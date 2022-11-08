@@ -7,12 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
     <title>
-        {{ Request::is('dashboard') ? 'dashboard' : '' }}
+        {{-- {{ ($title === "edit") ? '' : '' }} --}}
+        {{ Request::is('home') ? 'Dashboard' : '' }}
+        {{ Request::is('*dashboard/data/*/edit') ? 'Edit': '' }}
+        {{ Request::is('dashboard') ? 'Dashboard' : '' }}
         {{ Request::is('dashboard/data') ? 'Lihat Data' : '' }}
         {{ Request::is('dashboard/data/create') ? 'Tambah Data' : '' }}
         {{ Request::is('dashboard/cetak/cetak-data-pekerja-form') ? 'Cetak' : '' }}
         {{ Request::is('dashboard/document/show') ? 'Lihat Document' : '' }}
-        {{ Request::is('dashboard/document/index') ? 'Tambah Document' : '' }}
+        {{ Request::is('dashboard/document/index') ? 'Unggah Document' : '' }}
         {{ Request::is('dashboard/password/edit') ? 'Ganti Password' : '' }}
     </title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">

@@ -175,7 +175,7 @@
                     </thead>
                     <tbody >
                         @foreach ($datamhs as $key => $value)
-                        <tr class="bg-white hover:bg-slate-100 hover:text-black">
+                        <tr class="bg-white hover:bg-gray-100 hover:text-black">
                             <th class="py-4 text-center px-2 font-medium text-gray-900 rounded-l-xl">
                                 {{ $datamhs->firstItem() + $key }}
                             </th>
