@@ -8,12 +8,12 @@
                 <ion-icon name="menu-outline" class="hidden lg:flex"> </ion-icon>
             </div>
 
-            <div class="bg-white lg:absolute -mt-16 lg:mt-20 inset-0 z-10 p-4">
-                <div class="modal w-full  md:inset-0 z-50 justify-center items-center h-modal sm:h-full">
+            <div class="bg-white inset-0 z-10">
+                <div class="w-full  md:inset-0 z-50 justify-center items-center sm:h-full">
                     <div class=" w-full max-w-3xl md:max-w-5xl lg:max-w-6xl px-4 md:p-0 h-full md:h-auto">
-                        <div class="bg-white rounded-lg shadow relative">
-                            <div class="flex items-start justify-between p-5 border-b rounded-t">
-                                <h3 class="text-xl font-semibold pt-5">
+                        <div class="bg-white rounded-lg relative">
+                            <div class="flex items-start justify-between pb-5 border-b rounded-t">
+                                <h3 class="text-xl font-semibold pt-5 pl-4">
                                     Edit Data
                                     {{ $model->nama_lengkap }}
                                 </h3>

@@ -9,9 +9,9 @@
       <ion-icon name="menu-outline" class="hidden lg:flex"> </ion-icon>
     </div>
 
-    <div class="bg-white lg:mt-3 -mt-16 inset-0 z-10 p-4 lg:pb-0 lg:pt-0">
+    <div class="bg-white lg:mt-3 inset-0 z-10 p-4 lg:pb-0 lg:pt-0">
 
-      <div class="p-4 bg-white block sm:flex items-center justify-between border-b border-gray-200 lg:mt-1.5">
+      <div class="pt-4 bg-white block sm:flex items-center justify-between border-b border-gray-200 lg:mt-1.5">
         <div class="mb-1 w-full">
           <div class="mb-1">
             <h1 class="text-xl sm:text-2xl font-semibold text-gray-900 uppercase"> cetak data pekerja</h1>
@@ -42,7 +42,7 @@
 
         <a href="" onclick="this.href='/dashboard/cetak/cetak-data-pertanggal/'+ document.getElementById('tglawal').value +
                   '/' + document.getElementById('tglakhir').value "
-          class="col-span-6 block text-center py-2 shadow-sm bg-temaku border border-gray-300 text-slate-50 sm:text-sm rounded-lg" target="_blank">Cetak data
+          class="col-span-6 block text-center hover:text-white py-2 shadow-sm bg-temaku border border-gray-300 text-slate-50 sm:text-sm rounded-lg" target="_blank">Cetak data
           pertanggal
         </a>
 

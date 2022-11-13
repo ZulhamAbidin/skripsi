@@ -65,7 +65,7 @@
                                 clip-rule="evenodd"></path>
                         </svg>
                     </div>
-                    <input type="text" name="search" id=""
+                    <input type="text" name="search" id="myInputTextField"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full pl-10 p-2.5"
                         placeholder="Search" required="">
         
@@ -150,7 +150,7 @@
 
             <div class="mb-1 grid grid-cols-5 mt-4 lg:flex justify-between">
 
-                <div class="mb-1 mt-1 col-span-2 lg:col-span-2 lg:ml-28 overflow-x-auto">
+                <div class="mb-1 mt-1 col-span-2 lg:col-span-2 lg:ml-5 overflow-x-auto">
                     <h1 class="text-xl sm:text-2xl font-semibold text-gray-900 uppercase">Cloud Document</h1>
                 </div>
 
@@ -166,7 +166,7 @@
             </div>
 
             <div class="overflow-x-auto relative mx-4 mt-8">
-                <table class="w-full text-sm text-left text-gray-500">
+                <table class="w-full text-sm text-left text-gray-500" id="tableBuku">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-100">
                         <tr>
                             <th scope="col" class="py-3 px-6 rounded-l-lg">
@@ -201,7 +201,7 @@
             
                                 <div class="inline-flex rounded-md shadow-sm">
                                     <a href="/dashboard/document/show/{{ $value->id }}"
-                                        class="py-2 px-4 text-xs font-medium flex text-temaku bg-white hover:bg-red-500 hover:text-slate-50 rounded-l-lg border border-gray-200">
+                                        class="py-2 px-4 text-xs font-medium flex text-temaku bg-white hover:bg-red-500 hover:text-temakuhover rounded-l-lg border border-gray-200">
                                         <svg class="mr-2 h-5 w-5 text-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd"
                                                 d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
@@ -212,7 +212,7 @@
                                     </a>
                                 
                                     <a href="{{url('/dashboard/document/download',$value->file)}}" type="button" aria-current="page"
-                                        class="py-2 px-4 flex text-xs font-medium text-temaku bg-white rounded-r-md border border-gray-200 hover:bg-temaku hover:text-slate-50">
+                                        class="py-2 px-4 flex text-xs font-medium text-temaku bg-white rounded-r-md border border-gray-200 hover:bg-temaku hover:text-temakuhover">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                             class="mr-2 h-5 w-5 text-xs inline">
                                             <path stroke-linecap="round" stroke-linejoin="round"

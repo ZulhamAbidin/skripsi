@@ -17,16 +17,21 @@ class datacontroller extends Controller
 
     public function index(Request $request)
     {
-        $keyword = $request->keyword;
-        $datamhs = data::where('nama_lengkap', 'LIKE', '%' . $keyword . '%')
-            ->orWhere('alamat_domisili', 'LIKE', '%' . $keyword . '%')
-            ->orWhere('hari', 'LIKE', '%' . $keyword . '%')
-            ->orWhere('jenis_kelamin', 'LIKE', '%' . $keyword . '%')
-            ->orWhere('pendidikan_terakhir', 'LIKE', '%' . $keyword . '%')
-            ->orWhere('jurusan', 'LIKE', '%' . $keyword . '%')
-            ->orderBy('id', 'desc')
-            ->paginate(5);
-        return view('Dashboard.data.index', compact('datamhs'));
+
+        return view('Dashboard.data.index', [
+            "datamhs" => data::all()
+        ]);
+
+        // $keyword = $request->keyword;
+        // $datamhs = data::where('nama_lengkap', 'LIKE', '%' . $keyword . '%')
+        //     ->orWhere('alamat_domisili', 'LIKE', '%' . $keyword . '%')
+        //     ->orWhere('hari', 'LIKE', '%' . $keyword . '%')
+        //     ->orWhere('jenis_kelamin', 'LIKE', '%' . $keyword . '%')
+        //     ->orWhere('pendidikan_terakhir', 'LIKE', '%' . $keyword . '%')
+        //     ->orWhere('jurusan', 'LIKE', '%' . $keyword . '%')
+        //     ->orderBy('id', 'desc')
+        //     ->paginate(5);
+        // return view('Dashboard.data.index', compact('datamhs'));
     }
 
     /**

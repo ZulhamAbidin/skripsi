@@ -11,15 +11,14 @@
           </div>
 
 
-            <div class="bg-white rounded-lg shadow relative -mt-10 lg:mt-2">
-              <div class="flex items-start justify-between p-5 border-b rounded-t">
-
+            <div class=" rounded-lg relative -mt-10 lg:mt-2">
+              <div class="flex items-start justify-between p-5 border-b">
                       <h3 class="text-xl font-semibold pt-2">
                         Tambah Data
                       </h3>
-                      
                 </div>
                   <div class="p-6 space-y-6">
+                    
                   <form action="{{ url('/dashboard/data') }}" method="POST">
                     @csrf
                     
@@ -41,7 +40,7 @@
                           <div class="col-span-6 sm:col-span-3">
                             <label for="pendidikan_terakhir" class="text-sm font-medium text-gray-900 block mb-2">Alamat Domisili</label>
                             <select name="alamat_domisili"
-                              class="focus:ring-temaku focus:border-temaku block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                              class="focus:ring-temaku focus:border-temaku block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white">
                               <option value="-"></option>
                               <option value="Kota Makassar">Kota Makassar</option>
                               <option value="Kota Palopo">Kota Palopo</option>

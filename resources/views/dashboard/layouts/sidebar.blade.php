@@ -2,7 +2,7 @@
     <ul>
         <li>
             <a href="#" class="flex">
-                <span class="icon mt-5">
+                <span class="icon mt-3">
                     <img src={{ asset('image/mks.jpg') }} class="h-14" alt="logo">
                 </span>
                 <span class="title mt-3 italic text-xl">E-Document</span>
@@ -17,8 +17,6 @@
                 <span class="title italic">Dashboard</span>
             </a>
         </li>
-
-
 
         <li class="my-2 {{ Request::is('dashboard/data') ? 'hovered' : ''  }} {{ Request::is('*dashboard/data/*/edit') ? 'hovered' : '' }} {{ Request::is('dashboard/data/{$id}.edit') ? 'hovered' : ''  }} {{ Request::is('dashboard/data/create') ? 'hovered' : ''  }}">
             <a class="mobile-menu-hamburger1">

@@ -6,22 +6,23 @@
 
         <div class="header p-2 grid grid-cols-12 items-center ">
 
-            <div class="toggle row-start-1 col-span-1 md:mt-2 hidden lg:flex invisible lg:visible">
+            <div class="toggle row-start-1 col-span-1 md:mt-2 hidden lg:flex ">
                 <ion-icon name="menu-outline" class="hidden lg:flex"></ion-icon>
             </div>
 
-            <form action action=" {{ url('dashboard.data') }}" method="GET" class="col-span-11 row-start-1 lg:col-span-9 col-start-1 flex items-center">
+            <form  {{-- action action=" {{ url('dashboard.data') }}" method="GET" --}} class="col-span-11 row-start-1 lg:col-span-9 col-start-1 flex items-center">
                 <label for="simple-search" class="sr-only">Search</label>
                 <div class="relative w-full">
                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="currentColor"
                             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                                 clip-rule="evenodd"></path>
                         </svg>
                     </div>
-                    <input type="text" name="keyword" id=""
+                   
+                    <input type="text" {{-- name="keyword" --}} id="myInputTextField"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full pl-10 p-2.5"
                         placeholder="Search" required="">
 
@@ -44,7 +45,7 @@
             </form>
 
             <button id="dropdownDefault" data-dropdown-toggle="dropdown"
-                class="text-white invisible lg:visible bg-temaku hover:bg-temakuhover w-fit mx-auto col-span-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                class="text-white hidden lg:flex  bg-temaku hover:bg-temakuhover w-fit mx-auto col-span-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center inline-flex items-center"
                 type="button">
 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -62,28 +63,28 @@
 
             </button>
             <!-- Dropdown menu -->
-            <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+            <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow"
                 data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
                 style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 539px);">
-                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownDefault">
                     <li>
-                        <a href="#" class="block py-2 px-4 text-center hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{ auth()->user()->name }}</a>
+                        <a href="#" class="block py-2 px-4 text-center hover:bg-gray-100 hover:text-slate-900 hover:no-underline">{{
+                            auth()->user()->name }}</a>
                         <hr class="mt-1">
                     </li>
                     <li>
-                        <a href="/dashboard"
-                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                        <a href="/dashboard" class="block py-2 px-4 hover:bg-gray-100 hover:text-slate-900 hover:no-underline">Dashboard</a>
                     </li>
                     <li>
                         <a href="/dashboard/password/edit"
-                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            class="block py-2 px-4 hover:bg-gray-100 hover:text-slate-900 hover:no-underline ">Settings</a>
                     </li>
                     <li>
-                        <form action="/logout" method="post" class="hover:bg-gray-100">
+                        <form action="/logout" method="post" class="hover:bg-gray-100 hover:text-slate-900 hover:no-underline">
                             @csrf
                             <button class="block py-2 px-4 hover:bg-gray-100" type="submit">Sign Out</button>
                         </form>
-                    </li>
+                    </li>   
                 </ul>
             </div>
         </div>
@@ -91,7 +92,7 @@
         <div class="header-button flex justify-end lg:justify-end mx-3 gap-1">
 
             <a href="/dashboard/data/create" type="button"
-                class="add-modal  text-white bg-temaku hover:bg-temakuhover focus:ring-4 focus:ring-temaku font-medium inline-flex items-center rounded-lg text-sm px-3 py-2 text-center">
+                class=" text-white bg-temaku hover:bg-temakuhover focus:ring-4 focus:ring-temaku font-medium inline-flex items-center rounded-lg text-sm px-3 py-2 text-center">
                 <svg class="-ml-1 mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
@@ -125,12 +126,13 @@
 
         </div>
 
-        <div class="bg-white lg:mt-3 inset-0 z-10 p-4 lg:pb-0 lg:pt-0">
+        <div class="bg-white lg:mt-3 inset-0 z-10 pl-4 lg:pb-0 lg:pt-0">
 
-            <div class="p-4 bg-white block sm:flex items-center justify-between border-gray-200 lg:mt-1.5">
+            <div class="pl-4 pb-4 bg-white block sm:flex items-center justify-between border-gray-200 lg:mt-1.5">
                 <div class="mb-1 w-full">
                     <div class="mb-1">
                         <h1 class="text-xl font-semibold text-gray-900 flex lg:text-3xl">Data Pencari Kerja</h1>
+                        
                         @if (Session::has('success'))
                         <div class="flex justify-between text-slate-50 shadow-inner rounded p-3 bg-temaku mx-24 my-6">
                             <p class="self-center">
@@ -144,13 +146,13 @@
             </div>
 
             <div class="overflow-x-auto relative mx-4">
-                <table class="w-full text-sm text-left text-gray-500">
+                <table id="tableBuku" class="w-full text-sm text-left text-gray-500">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-100">
                         <tr>
                             <th scope="col" class="py-3 px-6 rounded-l-lg">
-                                NO
+                                ID
                             </th>
-                            <th scope="col" class="py-3 px-6">
+                            <th scope="col" class="py-3 px-6 ">
                                 Nama Lengkap
                             </th>
                             <th scope="col" class="py-3 px-6">
@@ -174,12 +176,13 @@
                         </tr>
                     </thead>
                     <tbody >
+                        
                         @foreach ($datamhs as $key => $value)
-                        <tr class="bg-white hover:bg-gray-100 hover:text-black">
+                        <tr class="bg-white hover:bg-gray-300 hover:text-black">
                             <th class="py-4 text-center px-2 font-medium text-gray-900 rounded-l-xl">
-                                {{ $datamhs->firstItem() + $key }}
+                                {{ $value->id }}
                             </th>
-                            <td scope="py-4 px-6" class="py-4 w-56 px-6">
+                            <td scope="py-4 px-6" class="py-4 w-fit px-6">
                                 {{ $value->nama_lengkap }}
                             </td>
                             <td class="py-4 px-6">
@@ -204,7 +207,7 @@
                                         @csrf
                                         <input type="hidden" name="_method" value="DELETE">
                                         <button href="#" aria-current="page"
-                                            class="py-2 px-4 text-xs font-medium flex text-temakuhover bg-white hover:bg-red-500 hover:text-slate-50 rounded-l-lg border border-gray-200">
+                                            class="py-2 px-4 text-xs font-medium flex text-temakuhover bg-white hover:bg-red-500 rounded-l-lg border border-gray-200">
                                             <svg class="mr-2 h-5 w-5 text-xs" fill="currentColor" viewBox="0 0 20 20"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd"
@@ -217,7 +220,7 @@
                                     </form>
                                 
                                     <a href="{{ url('dashboard/data/' . $value->id . '/edit') }}" type="button"
-                                        class="py-2 flex px-4 text-xs font-medium text-temakuhover bg-white rounded-r-md border border-gray-200 hover:bg-amber-400 hover:text-slate-50">
+                                        class="py-2 flex px-4 text-xs font-medium text-temakuhover bg-white rounded-r-md border border-gray-200 hover:bg-amber-400 hover:text-temakuhover">
                                         <svg class="mr-2 h-5 w-5 text-xs " fill="currentColor" viewBox="0 0 20 20"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z">
@@ -236,8 +239,8 @@
                         </tr>
                         @endforeach
                     </tbody>
-                    
                 </table>
+                {{-- {{ $datamhs->links() }} --}}
             </div>
 
 

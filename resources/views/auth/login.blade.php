@@ -4,19 +4,19 @@
 <form action="/login" method="POST" action="{{ route('login') }}" class="mx-12 mt-6 md:w-1/2 md:mx-auto lg:w-1/3">
     @csrf
     @error('email')
-    <div id="alert-2" class="flex p-4 mb-4 bg-red-100 rounded-lg dark:bg-red-200" role="alert">
-        <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-red-700 dark:text-red-800" fill="currentColor"
+    <div id="alert-2" class="flex p-4 mb-4 bg-red-100 rounded-lg" role="alert">
+        <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-red-700" fill="currentColor"
             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd"
                 d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
                 clip-rule="evenodd"></path>
         </svg>
         <span class="sr-only">Info</span>
-        <div class="ml-3 text-sm font-medium text-red-700 dark:text-red-800">
+        <div class="ml-3 text-sm font-medium text-red-700">
             Username atau password tidak sesuai
         </div>
         <button type="button"
-            class="ml-auto -mx-1.5 -my-1.5 bg-red-100 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex h-8 w-8 dark:bg-red-200 dark:text-red-600 dark:hover:bg-red-300"
+            class="ml-auto -mx-1.5 -my-1.5 bg-red-100 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex h-8 w-8 "
             data-dismiss-target="#alert-2" aria-label="Close">
             <span class="sr-only">Close</span>
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -28,19 +28,19 @@
     </div>
     @enderror
 
-    <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-slate-50 mb-4">
+    <h2 class="text-2xl lg:text-3xl font-bold text-gray-9004">
         Sign in
     </h2>
 
     <div class="mb-6">
-        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
         <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full p-2.5
           @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email"
             autofocus type="email">
     </div>
 
     <div class="mb-6">
-        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
+        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 0">Your
             password</label>
         <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full p-2.5
          @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" >
@@ -52,7 +52,7 @@
             __('Login') }}</button>
         @if (Route::has('password.request'))
         
-        <a class="text-xs pt-3 col-span-1 hover:text-gray-400 dark:text-gray-50" href="{{ route('password.request') }}">
+        <a class="text-xs pt-3 col-span-1 hover:text-gray-400" href="{{ route('password.request') }}">
             {{ __('Forgot Your Password?') }}
         </a>
         @endif
