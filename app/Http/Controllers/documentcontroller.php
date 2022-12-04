@@ -28,11 +28,11 @@ class documentcontroller extends Controller
     public function show(Request $request)
     {
         $request = $request->search;
-        $data = document::where('nama', 'LIKE', '%' . $request . '%')
+        $document = document::where('nama', 'LIKE', '%' . $request . '%')
             ->orWhere('description', 'LIKE', '%' . $request . '%')
             ->orderBy('id', 'desc')
             ->paginate(5);
-        return view('dashboard.document.show', compact('data'));
+        return view('dashboard.document.show', compact('document'));
     }
 
     public function download(Request $request, $file)

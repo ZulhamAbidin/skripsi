@@ -11,7 +11,7 @@
     </title>
     @vite('resources/css/app.css')
 </head>
-<body>
+<body onload="zoom()">
     @include('auth.layouts.navbar')
 
     @yield('container')
@@ -19,5 +19,11 @@
     @include('auth.layouts.footer')
 
     @vite('resources/js/app.js')
+    <script type="text/javascript">
+        function zoom() {
+                document.body.style.zoom = "90%" 
+            }
+    </script>
 </body>
 </html>
+

@@ -166,7 +166,7 @@
             </div>
 
             <div class="overflow-x-auto relative mx-4 mt-8">
-                <table class="w-full text-sm text-left text-gray-500" id="tableBuku">
+                <table class="w-full text-sm text-left text-gray-500">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-100">
                         <tr>
                             <th scope="col" class="py-3 px-6 rounded-l-lg">
@@ -184,11 +184,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- @foreach ($datamhs as $key => $value) --}}
-                        @foreach ($data as $key=>$value)
+
+                        @foreach ($document as $key=>$value)
                         <tr class="bg-white hover:bg-slate-100 hover:text-black">
                             <td class="py-4 px-6">
-                                {{ $data->firstItem() + $key }}
+                                {{ $document->firstItem() + $key }}
                             </td>
                             <td scope="py-4 px-6" class="py-4 px-6">
                                {{ $value->nama }}
@@ -229,6 +229,9 @@
                     </tbody>
             
                 </table>
+                <div class="mx-2 my-10">
+                    {{ $document->onEachSide(2)->links() }}
+                </div>
             </div>
 
         </div>

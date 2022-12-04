@@ -62,7 +62,7 @@
                     <div class=" w-full px-4 md:p-0 h-full md:h-auto">
                         <div class="bg-white">
                             <div class="flex justify-between pb-5 mx-10">
-                                <h3 class="text-xl  font-semibold pb-5">
+                                <h3 class="text-xl  font-semibold pb-1">
                                     Ganti Password
                                 </h3>
                             </div>

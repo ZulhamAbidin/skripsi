@@ -9,9 +9,15 @@
     @include('dashboard.layouts.sidebar')
     @include('dashboard.layouts.navbar')
     @yield('container')
-    
+
     <script src="{{ asset('js/main.js') }}"></script>
-    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
     {{-- masih cdn --}}
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -34,38 +40,16 @@
     <link rel="icon" href="{{ asset('image/dashboardicon.png') }}">
 </head>
 
-<body>
+<body onload="zoom()">
 
-  
+
     @vite('resources/js/app.js')
 
-    
-
-    {{-- ENDD DATA TABLES --}}
-
-    <script>
-        $(document).ready(function () {
-                $('#tableBuku').DataTable();
-            });
-    
-            //menambahkan form input custom
-            oTable = $('#tableBuku')
-            .DataTable(); //pay attention to capital D, which is mandatory to retrieve "api" datatables' object, as @Lionel said
-            $('#myInputTextField').keyup(function () {
-                oTable.search($(this).val()).draw();
-            })
-    </script>
-    
-    <style>
-        .dataTables_filter,
-        .dataTables_info {
-            display: none;
+<script type="text/javascript">
+    function zoom() {
+            document.body.style.zoom = "85%" 
         }
-
-        .text-xs {
-        text-decoration: none;
-        }
-    </style>
+</script>
 
 
 </body>

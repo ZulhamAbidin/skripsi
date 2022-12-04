@@ -177,7 +177,7 @@
                     </thead>
                     <tbody >
                         
-                        @foreach ($datamhs as $key => $value)
+                        @foreach ($data as $key => $value)
                         <tr class="bg-white hover:bg-gray-300 hover:text-black">
                             <th class="py-4 text-center px-2 font-medium text-gray-900 rounded-l-xl">
                                 {{ $value->id }}
@@ -240,7 +240,9 @@
                         @endforeach
                     </tbody>
                 </table>
-                {{ $datamhs->links() }}
+                <div class="mx-2 my-10">
+                    {{ $data->onEachSide(2)->links() }}
+                </div>
             </div>
 
 

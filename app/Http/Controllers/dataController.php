@@ -23,15 +23,15 @@ class datacontroller extends Controller
         // ]);
 
         $keyword = $request->keyword;
-        $datamhs = data::where('nama_lengkap', 'LIKE', '%' . $keyword . '%')
+        $data = data::where('nama_lengkap', 'LIKE', '%' . $keyword . '%')
             ->orWhere('alamat_domisili', 'LIKE', '%' . $keyword . '%')
             ->orWhere('hari', 'LIKE', '%' . $keyword . '%')
             ->orWhere('jenis_kelamin', 'LIKE', '%' . $keyword . '%')
             ->orWhere('pendidikan_terakhir', 'LIKE', '%' . $keyword . '%')
             ->orWhere('jurusan', 'LIKE', '%' . $keyword . '%')
-            ->orderBy('id', 'desc')
+            ->orderBy('id', 'ASC')
             ->paginate(5);
-        return view('Dashboard.data.index', compact('datamhs'));
+        return view('Dashboard.data.index', compact('data'));
     }
 
     /**
