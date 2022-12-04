@@ -57,20 +57,14 @@
                 </div>
             </div>
 
-            <div class="bg-white pt-4 lg:w-full">
+            <div class="bg-white pt-4">
                 <div class="w-full justify-center items-center">
                     <div class=" w-full px-4 md:p-0 h-full md:h-auto">
                         <div class="bg-white">
-                            <div class="flex justify-between pb-5t">
+                            <div class="flex justify-between pb-5 mx-10">
                                 <h3 class="text-xl  font-semibold pb-5">
                                     Ganti Password
                                 </h3>
-{{-- 
-                                <div class="">
-                                    <a href="/registerauth"
-                                        class="text-slate-50 text-center rounded-xl py-2 px-6 font-semibold bg-temaku hover:bg-temakuhover text-sm">Tambah
-                                        User</a>
-                                </div> --}}
                             </div>
                             @if (Session::has('success'))
                                 <div
@@ -86,7 +80,7 @@
                                 <form method="POST" class="text-pink-500" action="{{ url('/dashboard/password/edit') }}">
                                     @method('put')
                                     @csrf
-                                    <div class="grid grid-cols-6 gap-6">
+                                    <div class="grid grid-cols-6 gap-6 mx-10">
 
                                         <div class="col-span-6">
                                             <label for="current_password"
@@ -132,7 +126,8 @@
 
                                     </div>
                             </div>
-                            <div class="p-4 border-t border-gray-200 rounded pb-48">
+
+                            <div class="p-4 border-t border-gray-200 rounded pb-48 mx-6">
                                 <button
                                     class="text-white w-full mb-2 bg-temaku hover:bg-temakuhover focus:ring-4 focus:ring-temaku font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                                     type="submit">Submit</button>
@@ -150,9 +145,6 @@
 
 
             </div>
-
-
-
 
         </div>
 

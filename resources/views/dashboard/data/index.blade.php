@@ -2,7 +2,7 @@
 
 @section('container')
 <div class="bungkus w-11/12">
-    <div class="main mt-3 lg:fixed">
+    <div class="main mt-3 ">
 
         <div class="header p-2 grid grid-cols-12 items-center ">
 
@@ -22,7 +22,7 @@
                         </svg>
                     </div>
                    
-                    <input type="text" {{-- name="keyword" --}} id="myInputTextField"
+                    <input type="text" name="keyword" {{-- id="myInputTextField" --}}
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-temaku focus:border-temaku block w-full pl-10 p-2.5"
                         placeholder="Search" required="">
 
@@ -146,7 +146,7 @@
             </div>
 
             <div class="overflow-x-auto relative mx-4">
-                <table id="tableBuku" class="w-full text-sm text-left text-gray-500">
+                <table {{-- id="tableBuku" --}} class="w-full text-sm text-left text-gray-500">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-100">
                         <tr>
                             <th scope="col" class="py-3 px-6 rounded-l-lg">
@@ -240,7 +240,7 @@
                         @endforeach
                     </tbody>
                 </table>
-                {{-- {{ $datamhs->links() }} --}}
+                {{ $datamhs->links() }}
             </div>
 
 
