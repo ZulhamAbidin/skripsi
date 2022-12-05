@@ -113,7 +113,7 @@
                 Print Data
             </a>
 
-            <a href="/export-csv" type="button"
+         {{--    <a href="/export-csv" type="button"
                 class=" text-white bg-temaku hover:bg-temakuhover focus:ring-4 focus:ring-temaku font-medium inline-flex items-center rounded-lg text-sm px-3 py-2 text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-5 h-5 mr-1">
@@ -122,7 +122,7 @@
                 </svg>
 
                 Export Data Ke Excel
-            </a>
+            </a> --}}
 
         </div>
 
@@ -146,7 +146,7 @@
             </div>
 
             <div class="overflow-x-auto relative mx-4">
-                <table {{-- id="tableBuku" --}} class="w-full text-sm text-left text-gray-500">
+                <table id="table"  class="w-full text-sm text-left text-gray-500">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-100">
                         <tr>
                             <th scope="col" class="py-3 px-6 rounded-l-lg">
@@ -244,6 +244,21 @@
                     {{ $data->onEachSide(2)->links() }}
                 </div>
             </div>
+
+            {{-- <table id="table_id">
+                <thead>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table> --}}
 
 
         </div>
