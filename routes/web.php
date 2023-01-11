@@ -29,6 +29,7 @@ Route::resource('dashboard/data', datacontroller::class)->middleware('auth');
 // CETAK DATA PERTANGGAL
 Route::get('/dashboard/cetak/cetak-data-pekerja-form', [datacontroller::class, 'cetakForm'])->name('cetak-data-pekerja-form')->middleware('auth');
 Route::get('/dashboard/cetak/cetak-data-pertanggal/{tglawal}/{tglakhir}', [datacontroller::class, 'cetakPekerjaPertanggal'])->name('cetak-data-pertanggal')->middleware('auth');
+Route::get('/exportexcel', [datacontroller::class, 'exportexcel'])->name('exportexcel');
 
 // DOCUMENT SHOW DOWNLOAD ADD
 Route::get('/dashboard/document/index',[documentcontroller::class,'uploaddocument'])->middleware('auth');

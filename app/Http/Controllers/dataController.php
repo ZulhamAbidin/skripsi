@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\data;
-use App\Http\Requests\DataRequest;
 use App\Exports\dataexport;
-use Excel;
+use App\Exports\UserExport;
+
+use Illuminate\Http\Request;
+use App\Http\Requests\DataRequest;
+use App\Http\Controllers\Controller;
+use Maatwebsite\Excel\Facades\Excel;
+
+ 
 
 class datacontroller extends Controller
 {
@@ -131,13 +136,21 @@ class datacontroller extends Controller
         return view('/dashboard/cetak/cetak-pekerja-pertanggal', compact('cetakPertanggal'));
     }
 
-    public function exportintoexcel()
+    //excel
+    public function cetakFormm()
     {
-        return Excel::download(new dataexport(), 'datalist.xlsx');
+        return view('/dashboard/cetak/cetak-pekerja-formm');
     }
 
-    public function exportintocsv()
+    public function cetakPekerjaPertanggall($tglawall, $tglakhirr)
     {
-        return Excel::download(new dataexport(), 'datalist.xlsx');
+        $cetakPertanggall = data::whereBetween('hari', [$tglawall, $tglakhirr])->get();
+        // return view('/dashboard/cetak/cetak-pekerja-pertanggall', compact('cetakPertanggall'));
+        return Excel::download(new UserExport, 'data.xlsx');
+    }
+
+    public function exportexcel()
+    {
+        return Excel::download(new dataexport, 'data.xlsx');
     }
 }

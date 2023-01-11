@@ -113,7 +113,7 @@
                 Print Data
             </a>
 
-         {{--    <a href="/export-csv" type="button"
+            <a href="/exportexcel" type="button"
                 class=" text-white bg-temaku hover:bg-temakuhover focus:ring-4 focus:ring-temaku font-medium inline-flex items-center rounded-lg text-sm px-3 py-2 text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-5 h-5 mr-1">
@@ -122,7 +122,7 @@
                 </svg>
 
                 Export Data Ke Excel
-            </a> --}}
+            </a>
 
         </div>
 

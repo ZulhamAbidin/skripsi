@@ -24,6 +24,8 @@
         </div>
       </div>
 
+      
+
       <div class="grid grid-cols-6 gap-6 mt-10">
 
         <div class="col-span-6 lg:col-span-3">
@@ -44,6 +46,11 @@
                   '/' + document.getElementById('tglakhir').value "
           class="col-span-6 block text-center hover:text-white py-2 shadow-sm bg-temaku border border-gray-300 text-slate-50 sm:text-sm rounded-lg" target="_blank">Cetak data
           pertanggal
+        </a>
+
+        <a href="/exportexcel"
+          class="col-span-6 block text-center hover:text-white py-2 shadow-sm bg-temaku border border-gray-300 text-slate-50 sm:text-sm rounded-lg"
+          target="_blank">Convert Excel
         </a>
 
       </div>
